@@ -1,0 +1,61 @@
+.home-cards {
+
+	margin: 20px 0;
+
+	&__box {
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+	&__item {
+
+		padding: 40px;
+		position: relative;
+		border-radius: 20px;
+		margin: 18px;
+		border: 1px solid var(--border);
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.h2, p {
+
+		margin: 7px 0;
+
+	}
+
+	&__btn {
+
+		margin-top: auto;
+		padding: 28px 0 8px;
+
+	}
+
+	&__token {
+
+		text-align: center;
+		width: 335px;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__first-workshop {
+
+		width: 708px;
+		padding-left: 336px;
+
+	}
+
+	&__img {
+
+		position: absolute;
+		top: 33px;
+		left: 71px;
+
+	}
+
+}

@@ -5,7 +5,7 @@
 	--error: #f00;
 	--bg: #1d1d1d;
 	--blue: blue;
-	--border: color(#fad06a a(70%));;
+	--border: color(#fad06a a(20%));
 	--green: green;
 	--yellow: #fad06a;
 	--transitionDefault: .3s;

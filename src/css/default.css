@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
+/* color: red !important; */
 }
 
 html {
@@ -32,6 +32,9 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
+	/* background-image: url(/css/0.png); */
+	background-position: center 0;
+
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
@@ -45,6 +48,7 @@ a {
 
 	color: var(--color);
 	text-decoration: none;
+	transition: var(--transitionDefault);
 
 	&:hover {
 
@@ -65,8 +69,8 @@ a {
 img {
 
 	border: 0;
+	display: block;
 	position: relative;
-	vertical-align: top;
 
 }
 
@@ -81,6 +85,7 @@ svg {
 
 	display: block;
 	fill: var(--color);
+	position: relative;
 	transition: var(--transitionDefault);
 
 }

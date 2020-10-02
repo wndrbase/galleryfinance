@@ -8,7 +8,7 @@
 
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
-	<link href="/js/swiper.min.js" rel="preload" as="script">
+	<!-- <link href="/js/swiper.min.js" rel="preload" as="script"> -->
 <!-- 	<link href="/fonts/Gilroy-Medium.woff2" rel="preload" as="font">
 <link href="/fonts/Gilroy-Extrabold.woff2" rel="preload" as="font">
 <link href="/fonts/Gilroy-Regular.woff2" rel="preload" as="font">
@@ -57,12 +57,6 @@
 
 	<main class="main">
 
-{% if breadcrumbs %}
-
-	{% include "template/breadcrumbs.html" %}
-
-{% endif %}
-
 {% block content %}{% endblock %}
 
 	</main>
@@ -70,8 +64,6 @@
 {% include "template/footer.html" %}
 
 </div>
-
-{% include "template/cookie.html" %}
 
 </body>
 </html>
