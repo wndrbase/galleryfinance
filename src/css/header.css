@@ -2,47 +2,31 @@
 
 	position: relative;
 	z-index: 9;
-	padding: 40px 0 30px;
+	padding: 20px 0
 
-	&--sep {
-
-		border-bottom: 2px solid #eee;
-
-	}
-
-	@media ($smWidth) {
-
-		padding: 15px 0;
-
-	}
-
-	.center {
+	&__box {
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
-		@media ($mdWidth) {
-
-			width: 100%;
-			display: block;
-
-		}
-
 	}
 
 	&__logo {
 
-		@media ($smWidth) {
 
-			img {
+	}
 
-				width: 160px;
-				height: auto;
+	&__menu {
 
-			}
+		display: flex;
+		align-items: center;
 
-		}
+	}
+
+	&__btn {
+
+		margin-left: 24px;
 
 	}
 
