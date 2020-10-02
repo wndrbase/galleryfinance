@@ -1,0 +1,73 @@
+.menu {
+
+	white-space: nowrap;
+
+	&__title {
+
+		margin-bottom: 32px;
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 30px;
+		color: #131415;
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: center;
+
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
+
+	}
+
+	&__item {
+
+		margin: 0 20px;
+
+		@media ($mdWidth) {
+
+			margin: 20px 0;
+
+		}
+
+		&:last-child {
+
+			margin-right: 0;
+
+		}
+
+	}
+
+	&__link {
+
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 28px;
+		color: var(--color);
+		display: block;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: #3773f1;
+
+			}
+
+		}
+
+		@media ($mdWidth) {
+
+			font-size: 20px;
+			line-height: 30px;
+
+		}
+
+	}
+
+}

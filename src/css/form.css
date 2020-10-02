@@ -1,0 +1,181 @@
+.btn,
+.button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: .1s;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 0;
+	color: transparent;
+	text-align: center;
+	white-space: nowrap;
+	display: block;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&[disabled] {
+
+		pointer-events: none;
+
+	}
+
+}
+
+.btn {
+
+	padding: 0 50px;
+	height: 100px;
+	font-size: 24px;
+	line-height: 100px;
+	font-weight: 700;
+	color: #fff;
+	border-radius: 12px;
+	background-color: var(--green);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			background-color: #2f9978;
+
+		}
+
+	}
+
+	@media ($smWidth) {
+
+		height: 80px;
+		line-height: 80px;
+		font-size: 20px;
+
+	}
+
+	&--medium {
+
+		height: 80px;
+		font-size: 20px;
+		line-height: 80px;
+
+	}
+
+	&--small {
+
+		padding: 0 30px;
+		height: 60px;
+		font-size: 16px;
+		line-height: 60px;
+
+		@media ($smWidth) {
+
+			height: 40px;
+			line-height: 40px;
+			font-size: 16px;
+			padding: 0 20px;
+
+		}
+
+	}
+
+}
+
+.checkbox {
+
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 20px;
+	color: #7f7f7f;
+	position: relative;
+
+	@media ($smWidth) {
+
+		font-size: 12px;
+
+	}
+
+	a {
+
+		color: var(--color);
+		text-decoration: underline;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		display: block;
+		padding-left: 33px;
+
+		&::before {
+
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: '';
+			border: 1px solid #c2c2c2;
+			background-color: #fff;
+			border-radius: 4px;
+
+		}
+
+	}
+
+	&__input:checked + &__label::before {
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.722 12a1.11 1.11 0 01-.833-.355L3.212 8.609c-.348-.394-.258-.955.202-1.254.461-.3 1.115-.221 1.464.174l1.761 1.995 4.43-6.102c.304-.42.948-.548 1.438-.286.49.26.64.814.335 1.234l-5.233 7.207c-.182.251-.496.408-.84.422L6.723 12z' fill='%23131415'/%3E%3C/svg%3E");
+
+	}
+
+	&--error &__label::before {
+
+		border-color: #B73E3E;
+
+	}
+
+	&--white {
+
+		color: color(#fff a(70%));
+
+		a {
+
+			color: #fff;
+
+		}
+
+	}
+
+	&--white &__label::before {
+
+		border-color: #fff;
+
+	}
+
+}

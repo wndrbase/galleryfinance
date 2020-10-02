@@ -1,0 +1,17 @@
+:root {
+
+	--color: #fff;
+	--text: color(#fff a(70%));
+	--error: #f00;
+	--bg: #1d1d1d;
+	--blue: blue;
+	--border: color(#fad06a a(70%));;
+	--green: green;
+	--yellow: #fad06a;
+
+}
+
+$desktop: (min-width: 1200px);
+$mdWidth: (max-width: 1199px);
+$smWidth: (max-width: 719px);
+$xsWidth: (max-width: 359px);

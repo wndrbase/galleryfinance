@@ -1,0 +1,48 @@
+
+<aside class="billboard" id="billboard">
+
+	<div class="center">
+
+		<div class="billboard__box">
+
+			<div class="billboard__content">
+
+				<h1 class="h1">
+					Страхование ипотеки онлайн
+				</h1>
+
+				<div class="billboard__checkbox">
+
+					<label class="checkbox checkbox--white">
+
+{% include "template/agreement.html" %}
+
+					</label>
+
+				</div>
+
+				<a class="btn" href="/calculator">
+					Рассчитать
+				</a>
+
+				<p class="billboard__rule">
+					Нажимая кнопку «Рассчитать», вы присоединяетесь к условиям <a href="{{ url }}/docs/soglashenie/" target="_blank">Пользовательского соглашения</a>
+				</p>
+
+			</div>
+
+			<picture>
+
+				<source srcset="/img/billboard/img--mobile.svg" media="(max-width: 719px)">
+				<source srcset="/img/billboard/img--table.svg" media="(max-width: 1199px)">
+				<source srcset="/img/billboard/img.svg">
+
+				<img class="billboard__img" src="/img/billboard/img.svg" width="574" height="453" loading="lazy" alt="Страхование ипотеки онлайн">
+
+			</picture>
+
+		</div>
+
+	</div>
+
+</aside>
