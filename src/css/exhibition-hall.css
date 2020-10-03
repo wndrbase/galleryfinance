@@ -1,4 +1,4 @@
-.auction {
+.exhibition-hall {
 
 	text-align: center;
 	display: flex;
@@ -14,16 +14,38 @@
 
 		.h1 {
 
-			margin: 46px 0;
+			margin: 48px auto 10px;
+			max-width: 100%;
+			width: 768px;
+			line-height: 72px;
 
 		}
 
-		p {
+		ol {
 
-			width: 500px;
-			max-width: 100%;
-			margin: 24px auto;
+			display: flex;
+			margin: 10px -18px;
 			color: var(--text);
+			justify-content: center;
+			counter-reset: headings 0;
+
+			li {
+
+				width: 336px;
+				margin: 18px;
+				counter-increment: headings 1;
+
+				&::before {
+
+					content: counter(headings, decimal);
+					font-size: 20px;
+					display: block;
+					margin: 20px;
+					color: var(--yellow);
+
+				}
+
+			}
 
 		}
 
@@ -32,7 +54,7 @@
 	&__btn {
 
 		display: flex;
-		margin-top: 60px;
+		margin-top: 42px;
 		justify-content: center;
 
 		a {
@@ -54,6 +76,7 @@
 				}
 
 			}
+
 
 		}
 
