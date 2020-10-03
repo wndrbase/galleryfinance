@@ -3,6 +3,13 @@
 	position: relative;
 	z-index: 9;
 	padding: 20px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+	&--bb0 {
+
+		border-bottom: 0;
+
+	}
 
 	.center {
 

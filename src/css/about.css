@@ -2,6 +2,14 @@
 
 	display: flex;
 	position: relative;
+	flex-shrink: 0;
+	flex-grow: 1;
+
+	&__box {
+
+		display: flex;
+
+	}
 
 	&__bar {
 
@@ -80,7 +88,7 @@
 		padding: 74px 0 96px 116px;
 		color: var(--text);
 
-		h2 {
+		h1, h2 {
 
 			font-size: 24px;
 			line-height: 36px;
@@ -119,7 +127,7 @@
 
 		}
 
-		.total-tokens {
+		&-total-tokens {
 
 			font-size: 24px;
 			line-height: 36px;

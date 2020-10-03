@@ -4,14 +4,7 @@
 	background-color: color(var(--color) a(5%));
 	padding: 12px;
 	display: flex;
-	margin-top: 80px;
 	justify-content: center;
-
-	&.mt0 {
-
-		margin-top: 0;
-
-	}
 
 	&__links  {
 
