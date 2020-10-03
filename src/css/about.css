@@ -1,0 +1,146 @@
+.about {
+
+	display: flex;
+	position: relative;
+	width: 1080px;
+	max-width: 100%;
+	margin: auto;
+
+	&__bar {
+
+		position: relative;
+		width: 257px;
+		flex-shrink: 0;
+		padding: 120px 0;
+		border-right: 1px solid rgba(255, 255, 255, .1);
+
+		ul {
+
+			position: sticky;
+			top: 120px;
+
+		}
+
+		li {
+
+			margin-bottom: 24px;
+
+		}
+
+		a {
+
+			color: rgba(255, 255, 255, .5);
+			transition: var(--transitionDefault);
+			padding-left: 44px;
+
+			svg {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				fill: rgba(255, 255, 255, .5);
+				stroke: rgba(255, 255, 255, .5);
+
+			}
+
+			@media ($desktop) {
+
+				&:hover {
+
+					color: rgba(255, 255, 255, 1);
+
+					svg {
+
+						fill: rgba(255, 255, 255, 1);
+						stroke: rgba(255, 255, 255, 1);
+
+					}
+
+				}
+
+			}
+
+			&.is-active {
+
+				color: var(--yellow);
+				pointer-events: none;
+
+				svg {
+
+					fill: var(--yellow);
+					stroke: var(--yellow);
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&__body {
+
+		padding: 50px 0 96px 116px;
+		color: var(--text);
+
+		h2 {
+
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: 400;
+			color: var(--yellow);
+			padding-top: 36px;
+
+		}
+
+		p {
+
+			margin: 24px 0;
+
+		}
+
+		ol {
+
+			counter-reset: headings 0;
+
+			li {
+
+				counter-increment: headings 1;
+				padding: 0 22px;
+				margin: 24px 0;
+
+				&::before {
+
+					content: counter(headings, decimal);
+					position: absolute;
+					top: 0;
+					left: 0;
+
+				}
+
+			}
+
+		}
+
+		.total-tokens {
+
+			font-size: 24px;
+			line-height: 36px;
+			font-weight: 400;
+			color: var(--yellow);
+			padding: 36px;
+			margin: 36px 0;
+			text-align: center;
+			border: 1px solid color(var(--yellow) a(20%));
+
+			& + h2 {
+
+				margin-top: 0;
+
+			}
+
+		}
+
+	}
+
+}

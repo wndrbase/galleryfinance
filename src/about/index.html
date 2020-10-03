@@ -1,0 +1,24 @@
+{% set title = "About" %}
+
+{% set description = "Summary, Workshop, Auction, Exhibition hall, GLF Token" %}
+
+{% set urlPage = 'about' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<hr>
+
+	<article class="center">
+
+		<div class="about">
+
+{% include "about/bar.html" %}
+{% include "about/body.html" %}
+
+		</div>
+
+	</article>
+
+{% endblock %}
