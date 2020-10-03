@@ -1,0 +1,27 @@
+.head-page {
+
+	margin: 143px 0 72px;
+	text-align: center;
+
+	&__title {
+
+		margin: 22px 0;
+
+	}
+
+	&__intro {
+
+		font-size: 20px;
+		color: var(--text);
+		margin: 22px 0;
+
+	}
+
+	&__btn {
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+}

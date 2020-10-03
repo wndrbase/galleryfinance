@@ -1,0 +1,20 @@
+{% set title = "Pools" %}
+
+{% set description = "Buy GLF tokens now on Uniswap" %}
+
+{% set urlPage = 'pools' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<hr>
+
+	<article class="center">
+
+{% include "pools/head.html" %}
+{% include "pools/cards.html" %}
+
+	</article>
+
+{% endblock %}

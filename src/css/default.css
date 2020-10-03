@@ -32,7 +32,7 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-	/* background-image: url(/css/0.png); */
+	/* background-image: url(/css/1.png); */
 	background-position: center 0;
 
 	/* IE10+ CSS styles go here */
@@ -94,6 +94,15 @@ table {
 
 	border: 0;
 	border-collapse: collapse;
+
+}
+
+hr {
+
+	height: 1px;
+	border: 0;
+	background-color: #fff;
+	opacity: .1;
 
 }
 
