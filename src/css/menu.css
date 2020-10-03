@@ -13,13 +13,19 @@
 
 		margin: 0 24px;
 
+		&.is-current {
+
+			color: color(var(--color) a(50%));
+
+		}
+
 	}
 
 	&__link {
 
 		font-size: 15px;
 		font-weight: 500;
-		color: var(--color);
+		color: inherit;
 		display: block;
 		transform: var(--transitionDefault);
 
@@ -27,7 +33,7 @@
 
 			&:hover {
 
-				opacity: .5;
+				color: color(var(--color) a(50%));
 
 			}
 

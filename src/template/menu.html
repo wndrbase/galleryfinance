@@ -2,31 +2,31 @@
 
 			<ul class="menu__list">
 
-				<li class="menu__item">
+				<li class="menu__item{% if urlPage === 'about' %} is-current{% endif %}">
 
-					<a class="menu__link" href="">About</a>
-
-				</li>
-
-				<li class="menu__item">
-
-					<a class="menu__link" href="">Workshop</a>
+					<a class="menu__link" href="/about">About</a>
 
 				</li>
 
-				<li class="menu__item">
+				<li class="menu__item{% if urlPage === 'workshop' %} is-current{% endif %}">
 
-					<a class="menu__link" href="">Auction</a>
-
-				</li>
-
-				<li class="menu__item">
-
-					<a class="menu__link" href="">Exhibition hall</a>
+					<a class="menu__link" href="/workshop">Workshop</a>
 
 				</li>
 
-				<li class="menu__item">
+				<li class="menu__item{% if urlPage === 'auction' %} is-current{% endif %}">
+
+					<a class="menu__link" href="/auction">Auction</a>
+
+				</li>
+
+				<li class="menu__item{% if urlPage === 'exhibition-hall' %} is-current{% endif %}">
+
+					<a class="menu__link" href="/exhibition-hall">Exhibition hall</a>
+
+				</li>
+
+				<li class="menu__item{% if urlPage === 'pools' %} is-current{% endif %}">
 
 					<a class="menu__link" href="/pools">Pools</a>
 
