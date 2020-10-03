@@ -15,7 +15,8 @@
 
 		&.is-current {
 
-			color: color(var(--color) a(50%));
+			color: var(--yellow);
+			pointer-events: none;
 
 		}
 

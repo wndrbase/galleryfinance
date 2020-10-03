@@ -4,11 +4,23 @@
 
 {% set urlPage = '' %}
 
+{% set preloadImage = [
+	{
+		media: "(min-width: 768px)",
+		img : "/img/billboard/img--1380x623.webp"
+	},
+	{
+		media: "(max-width: 360px)",
+		img : "/img/billboard/img--1380x623.webp"
+	}
+] %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
 
 {% include "main/billboard.html" %}
-{% include "main/home-cards.html" %}
+{% include "main/service.html" %}
+{% include "main/cards.html" %}
 
 {% endblock %}
