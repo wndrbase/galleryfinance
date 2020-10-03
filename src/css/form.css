@@ -64,4 +64,12 @@
 
 	}
 
+	@media ($mdWidth) {
+
+		padding: 0 20px;
+		height: 46px;
+		line-height: 46px;
+
+	}
+
 }

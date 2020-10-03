@@ -2,6 +2,12 @@
 
 	white-space: nowrap;
 
+	@media ($mdWidth) {
+
+		display: none;
+
+	}
+
 	&__list {
 
 		display: flex;

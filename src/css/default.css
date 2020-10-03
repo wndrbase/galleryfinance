@@ -61,7 +61,7 @@ a {
 
 ::selection {
 
-	color: var(--color);
+	color: var(--bg);
 	background-color: var(--yellow);
 
 }

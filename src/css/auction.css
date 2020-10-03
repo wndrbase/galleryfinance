@@ -63,6 +63,7 @@
 
 		flex-shrink: 0;
 		display: flex;
+		mix-blend-mode: lighten;
 		justify-content: center;
 
 	}
