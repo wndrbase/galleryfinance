@@ -2,9 +2,6 @@
 
 	display: flex;
 	position: relative;
-	width: 1080px;
-	max-width: 100%;
-	margin: auto;
 
 	&__bar {
 
@@ -80,7 +77,7 @@
 
 	&__body {
 
-		padding: 50px 0 96px 116px;
+		padding: 74px 0 96px 116px;
 		color: var(--text);
 
 		h2 {
@@ -136,6 +133,7 @@
 			& + h2 {
 
 				margin-top: 0;
+				padding-top: 0;
 
 			}
 

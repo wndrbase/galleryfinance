@@ -5,32 +5,31 @@
 	&__box {
 
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 
 	}
 
 	&__item {
 
-		padding: 40px;
+		padding: 46px 40px 48px;
 		position: relative;
 		border-radius: 20px;
-		margin: 18px;
+		margin: 18px 0;
 		border: 1px solid var(--border);
 		display: flex;
 		flex-direction: column;
 
 	}
 
-	.h2, p {
+	p {
 
-		margin: 7px 0;
+		margin: 13px 0 36px;
 
 	}
 
 	&__btn {
 
 		margin-top: auto;
-		padding: 28px 0 8px;
 
 	}
 

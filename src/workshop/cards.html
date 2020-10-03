@@ -1,0 +1,103 @@
+{% set list = [
+
+	{
+		number : 1,
+		title  : "Stage One",
+		name   : "Voting for the 10 <span class=\"white-space-nowrap\">most-wanted</span> figures",
+		text   : "You can propose a figure or you can vote for a figure in the voting board. The top 10 figures that get most votes will be selected to next stage. You need to stake your GLF tokens for votes. Voters for the final figures will together share 4000 GLF token rewards. <a href=\"/\">Read details</a>"
+	},
+	{
+		number : 2,
+		title  : "Stage Two",
+		name   : "Voting for the Artwork",
+		text   : "Artists can draw  and submit their artworks those 10 figures, others can vote for the artwork they would love. TOP3 mostly-voted arts for each figure will be selected to next stage: their author and voters will share 10,000 GLF tokens. <a href=\"/\">Read details</a>"
+	},
+	{
+		number : 3,
+		title  : "Stage Three",
+		name   : "NFT mining",
+		text   : "Selected artworks will be made into NFTs for GLF token holders to mine. GLF token holders can stake and earn reward points. You can use your reward points to redeem NFT artworks. Then you redeemed NFT will be in your wallet for collecting or auctioning."
+	}
+
+
+] %}
+
+		<div class="workshop-cards">
+
+			<div class="workshop-cards__list">
+
+{% for item in list %}
+
+				<div class="workshop-cards__item">
+
+					<div class="workshop-cards__number">
+						{{ item.number }}
+					</div>
+
+					<h2 class="workshop-cards__title">
+						{{ item.title }}
+					</h2>
+
+					<p class="workshop-cards__name">
+						<span>
+							{{ item.name | safe }}
+						</span>
+					</p>
+
+					<hr>
+
+					<dl class="workshop-cards__dl">
+
+						<div class="workshop-cards__dl-row">
+
+							<dt class="workshop-cards__dl-dt">
+								Time in
+							</dt>
+
+							<dd class="workshop-cards__dl-dd">
+								00/00/20 -00/00/20
+							</dd>
+
+						</div>
+
+						<div class="workshop-cards__dl-row">
+
+							<dt class="workshop-cards__dl-dt">
+								Status
+							</dt>
+
+							<dd class="workshop-cards__dl-dd workshop-cards__dl-dd--green">
+								Ongoing
+							</dd>
+
+						</div>
+
+					</dl>
+
+					<hr>
+
+					<p class="workshop-cards__text">
+						{{ item.text | safe }}
+					</p>
+
+					{% if loop.index > 1 %}
+
+						<span class="workshop-cards__btn btn is-disabled">
+							Join
+						</span>
+
+					{% else %}
+
+						<a href="/" class="workshop-cards__btn btn">
+							Join
+						</a>
+
+					{% endif %}
+
+				</div>
+
+{% endfor %}
+
+			</div>
+
+		</div>

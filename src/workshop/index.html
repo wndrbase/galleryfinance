@@ -1,0 +1,21 @@
+{% set title = "The first workshop" %}
+
+{% set description = "You can propose a figure or you can vote for a figure in the voting board." %}
+
+{% set urlPage = 'workshop' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<hr>
+
+	<article class="center">
+
+{% include "workshop/head.html" %}
+{% include "workshop/info.html" %}
+{% include "workshop/cards.html" %}
+
+	</article>
+
+{% endblock %}

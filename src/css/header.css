@@ -4,6 +4,12 @@
 	z-index: 9;
 	padding: 20px 0;
 
+	.center {
+
+		width: 1380px;
+
+	}
+
 	&__box {
 
 		display: flex;

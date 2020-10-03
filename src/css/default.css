@@ -33,7 +33,7 @@ body {
 	background-color: var(--bg);
 
 	/* background-image: url(/css/1.png); */
-	background-position: center 0;
+	background-position: center 0px;
 
 	/* IE10+ CSS styles go here */
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {

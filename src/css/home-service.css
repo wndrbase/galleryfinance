@@ -6,7 +6,8 @@
 
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		margin: 0 -18px;
+		justify-content: space-between;
 
 	}
 

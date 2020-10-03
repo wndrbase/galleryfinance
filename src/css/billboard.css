@@ -1,8 +1,14 @@
 .billboard {
 
+	.center {
+
+		width: 1380px;
+
+	}
+
 	&__box {
 
-		background: #c4c4c4;
+		background-color: #c4c4c4;
 		border-radius: 10px;
 		position: relative;
 		overflow: hidden;
