@@ -44,11 +44,24 @@
 		position: relative;
 		padding: 29px 36px 29px 370px;
 
+		@media ($mdWidth) {
+
+			padding: 20px 36px;
+
+		}
+
 		&__img {
 
 			position: absolute;
 			top: 23px;
 			left: 35px;
+
+			@media ($mdWidth) {
+
+				position: sticky;
+				margin: 20px auto 0;
+
+			}
 
 		}
 

@@ -5,9 +5,15 @@
 	&__list {
 
 		display: flex;
-		flex-wrap: wrap;
 		margin: 0 -18px;
 		justify-content: space-between;
+
+		@media ($mdWidth) {
+
+			flex-wrap: wrap;
+			justify-content: center;
+
+		}
 
 	}
 

@@ -120,6 +120,13 @@ hr {
 	line-height: 60px;
 	font-weight: 400;
 
+	@media ($mdWidth) {
+
+		font-size: 36px;
+		line-height: 48px;
+
+	}
+
 }
 
 .h2 {

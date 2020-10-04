@@ -19,6 +19,13 @@
 		padding: 120px 0;
 		border-right: 1px solid rgba(255, 255, 255, .1);
 
+		@media ($mdWidth) {
+
+			width: 190px;
+			padding: 78px 0;
+
+		}
+
 		ul {
 
 			position: sticky;
@@ -88,6 +95,12 @@
 		padding: 74px 0 96px 116px;
 		color: var(--text);
 
+		@media ($mdWidth) {
+
+			padding: 36px 0 36px 36px;
+
+		}
+
 		h1, h2 {
 
 			font-size: 24px;
@@ -137,6 +150,13 @@
 			margin: 36px 0;
 			text-align: center;
 			border: 1px solid color(var(--yellow) a(20%));
+
+			@media ($mdWidth) {
+
+				font-size: 20px;
+				padding: 20px;
+
+			}
 
 			& + h2 {
 

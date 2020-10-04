@@ -19,6 +19,12 @@
 		text-align: center;
 		height: 623px;
 
+		@media ($mdWidth) {
+
+			height: 400px;
+
+		}
+
 		&::after {
 
 			position: absolute;

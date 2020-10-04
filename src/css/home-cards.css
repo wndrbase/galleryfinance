@@ -19,6 +19,15 @@
 		display: flex;
 		flex-direction: column;
 
+		@media ($mdWidth) {
+
+			padding: 36px;
+			width: 336px;
+			text-align: center;
+			margin: 0;
+
+		}
+
 	}
 
 	p {
@@ -36,7 +45,7 @@
 	&__token {
 
 		text-align: center;
-		width: 335px;
+		width: 336px;
 		justify-content: center;
 		align-items: center;
 
@@ -47,6 +56,13 @@
 		width: 708px;
 		padding-left: 336px;
 
+		@media ($mdWidth) {
+
+			justify-content: center;
+			align-items: center;
+
+		}
+
 	}
 
 	&__img {
@@ -54,6 +70,12 @@
 		position: absolute;
 		top: 33px;
 		left: 71px;
+
+		@media ($mdWidth) {
+
+			display: none;
+
+		}
 
 	}
 
