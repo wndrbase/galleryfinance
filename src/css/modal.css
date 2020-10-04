@@ -1,0 +1,181 @@
+.modal {
+
+	flex-grow: 1;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	z-index: 10;
+	display: none;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+
+	@media ($smWidth) {
+
+		padding: 20px;
+
+	}
+
+	&__box {
+
+		width: 528px;
+		max-width: 100%;
+		position: relative;
+
+	}
+
+	&__item {
+
+		position: relative;
+		padding: 60px;
+		border-radius: 12px;
+		background-color: #fff;
+
+		@media ($smWidth) {
+
+			padding: 20px;
+
+		}
+
+	}
+
+	&__close-btn {
+
+		position: absolute;
+		top: 24px;
+		right: 24px;
+
+		svg {
+
+			fill: #000;
+
+		}
+
+	}
+
+}
+
+.modal-show {
+
+	.modal {
+
+		display: flex;
+
+	}
+
+	.wrapper {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		pointer-events: none;
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: 0.8;
+			z-index: 9;
+			background-color: var(--bg);
+
+		}
+
+	}
+
+}
+
+.form-recieve {
+
+	&__title {
+
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 36px;
+		margin-bottom: 36px;
+		color: #000;
+
+	}
+
+	&__input {
+
+		display: flex;
+		position: relative;
+		align-items: center;
+		cursor: pointer;
+
+	}
+
+	&__input input:checked ~ &__image::after {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M4.17 7L0 3.11l1.67-1.55 2.5 2.33L8.33 0 10 1.56 4.17 7z' fill='%231D1D1D'/%3E%3C/svg%3E");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: var(--yellow);
+		border: 2px solid #fff;
+		border-radius: 50%;
+		top: -4px;
+		right: -2px;
+		content: '';
+
+	}
+
+	&__input input:checked ~ &__label::after {
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		content: 'selected';
+		text-decoration: underline;
+		margin: auto;
+		font-size: 14px;
+		line-height: 20px;
+		height: 20px;
+		font-weight: 400;
+
+	}
+
+	&__image {
+
+		width: 60px;
+		height: 60px;
+		background-color: color(var(--yellow) a(30%));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 12px;
+		border-radius: 50%;
+		flex-shrink: 0;
+		position: relative;
+
+	}
+
+	&__label {
+
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 36px;
+		color: #000;
+
+	}
+
+	hr {
+
+		margin: 12px 0;
+		background-color: #c4c4c4;
+		opacity: .2;
+
+	}
+
+}

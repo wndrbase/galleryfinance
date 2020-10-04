@@ -1,9 +1,11 @@
 'use strict';
 
 const gulp             = require('gulp');
+const babel            = require('gulp-babel');
 const postcss          = require('gulp-postcss');
 const autoprefixer     = require("autoprefixer");
 const csso             = require("gulp-csso");
+const minify           = require('gulp-minify');
 const browserReporter  = require('postcss-browser-reporter');
 
 const mqpacker         = require("css-mqpacker");
@@ -23,6 +25,8 @@ const filter           = require('gulp-filter');
 const del              = require('del');
 
 const newer            = require('gulp-newer');
+
+const concat           = require('gulp-concat');
 
 const debug            = require('gulp-debug');
 
@@ -128,13 +132,32 @@ gulp.task('css', function () {
 
 });
 
+gulp.task('js', function() {
+
+	return gulp.src(['src/js/js.js','src/js/*.js'])
+		.pipe(sourcemaps.init())
+		.pipe(concat('scripts.js'))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
+		.pipe(sourcemaps.write())
+		.pipe(minify({
+			preserveComments: "some",
+			ext : {
+				min:'.min.js'
+			}
+		}))
+		.pipe(gulp.dest('build/js/'))
+
+});
+
 gulp.task('serve', function() {
 
 	server.init({
 		server: 'build',
 		files: [
 			{
-				match: ['build/**/*.*', '!build/**/*.min.{css}'],
+				match: ['build/**/*.*', '!build/**/*.min.{css,js}'],
 				fn: function (event, file) {
 					this.reload()
 				}
@@ -153,7 +176,7 @@ gulp.task('clear', function() {
 
 gulp.task('copy', function() {
 
-	return gulp.src(['src/**/*.*', '!src/**/*.{css,html}'], {since: gulp.lastRun('copy')})
+	return gulp.src(['src/**/*.*', '!src/**/*.{css,html,js}'], {since: gulp.lastRun('copy')})
 			.pipe(debug({title: 'copy:'}))
 			.pipe(newer('build'))
 			.pipe(debug({title: 'copy:newer'}))
@@ -175,13 +198,15 @@ gulp.task('ftp', function () {
 		.pipe(debug({title: 'ftp:'}))
 		.pipe(f)
 		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(f.restore)
 		.pipe(ftp(config.ftp));
 
 });
 
 gulp.task('watch', function() {
-	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
+	gulp.watch('src/js/*.*', gulp.series('js'));
+	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
 	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html}'], gulp.series('copy'));
@@ -190,7 +215,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
 	'clear',
-	'css',
+	gulp.parallel('css','js'),
 	'html',
 	'copy',
 	gulp.parallel('ftp','watch','serve')
