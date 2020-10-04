@@ -1,0 +1,33 @@
+{% set title = "About Summary" %}
+
+{% set description = "Cryptocurrency and blockchain have existed for a long time, but there has never been a decentralized space for artists to experiment" %}
+
+{% set urlPage = 'about' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<div class="about__box">
+
+{% include "about/bar.html" %}
+
+			<div class="about__body">
+
+				<h1>
+					Summary
+				</h1>
+
+				<p>
+					Cryptocurrency and blockchain have existed for a long time, but there has never been a decentralized space for artists to experiment. In the art world, cryptocurrencies including NFTs are vehicles for artists to fulfill their needs and dreams in a better way. It is not only about buying low and selling high. We aim to build a space to support the ideology of artists and maintain the integrity of arts, while involving some elements of crypto. In Gallery Finance, you can open a workshop to let the community design and produce NFTs together based on voting, run your own auction for your arts and, store and exhibit your arts forever through decentralized storage.
+				</p>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+.head-page {
+
+	margin: 116px 0 72px;
+	text-align: center;
+
+	@media ($smWidth) {
+
+		margin: 20px 0;
+
+	}
+
+	&__title {
+
+		margin: 22px 0;
+
+	}
+
+	&__intro {
+
+		font-size: 20px;
+		color: var(--text);
+		margin: 22px 0;
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			margin: 16px 0;
+
+		}
+
+	}
+
+	&__btn {
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+}

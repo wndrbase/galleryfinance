@@ -1,0 +1,26 @@
+{% set title = site %}
+
+{% set description = "Where community-voted ideas are crowdsourced into digital artworks(NFTs)!" %}
+
+{% set urlPage = '' %}
+
+{% set preloadImage = [
+	{
+		media: "(min-width: 768px)",
+		img : "/img/billboard/img--1380x623.webp"
+	},
+	{
+		media: "(max-width: 360px)",
+		img : "/img/billboard/img--1380x623.webp"
+	}
+] %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+{% include "main/billboard.html" %}
+{% include "main/service.html" %}
+{% include "main/cards.html" %}
+
+{% endblock %}

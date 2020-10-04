@@ -1,0 +1,52 @@
+{% set title = "Auction" %}
+
+{% set description = "We think artist (the creator of the NFT) should always be rewarded. For all the auctions, we allocate 50% of transaction fees to the origial creators of the NFT" %}
+
+{% set urlPage = 'auction' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="auction center">
+
+		<div class="auction__body">
+
+			<h1 class="h1">
+				Decentralized NFT Auction Environment
+			</h1>
+
+			<p>
+				We think artist (the creator of the NFT) should always be rewarded. For all the auctions, we allocate 50% of transaction fees to the origial creators of the NFT.
+			</p>
+
+			<p>
+				When you create a great art piece, you will earn money from every single hand-exchange sale from it.
+			</p>
+
+			<div class="auction__btn">
+
+				<a href="/" class="">
+					Coming Soon!
+				</a>
+
+			</div>
+
+		</div>
+
+		<div class="auction__img">
+
+			<picture>
+
+				<source srcset="/img/auction/img.webp 1x, /img/auction/img@2x.webp 2x" type="image/webp">
+				<source srcset="/img/auction/img.png 1x, /img/auction/img@2x.png 2x">
+
+				<img src="/img/auction/img.png" width="400" height="394" loading="lazy" alt="">
+
+			</picture>
+
+		</div>
+
+	</article>
+
+{% endblock %}

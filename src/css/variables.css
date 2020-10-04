@@ -1,0 +1,18 @@
+:root {
+
+	--color: #fff;
+	--text: color(#fff a(70%));
+	--error: #f00;
+	--bg: #1d1d1d;
+	--blue: blue;
+	--border: color(#fad06a a(20%));
+	--green: green;
+	--yellow: #fad06a;
+	--transitionDefault: .3s;
+
+}
+
+$desktop: (min-width: 1200px);
+$mdWidth: (max-width: 1199px);
+$smWidth: (max-width: 747px);
+$xsWidth: (max-width: 359px);

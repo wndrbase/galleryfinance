@@ -1,0 +1,75 @@
+.btn,
+.button {
+
+	border: 0;
+	border-radius: 0;
+	font-family: inherit;
+	background-color: transparent;
+	transition: var(--transitionDefault);
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-size: 0;
+	color: transparent;
+	text-align: center;
+	white-space: nowrap;
+	display: block;
+
+	&:focus {
+
+		outline: none;
+
+	}
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&[disabled] {
+
+		pointer-events: none;
+
+	}
+
+}
+
+.btn {
+
+	padding: 0 36px;
+	height: 60px;
+	font-size: 16px;
+	line-height: 60px;
+	font-weight: 600;
+	color: var(--bg);
+	border-radius: 8px;
+	background-color: var(--yellow);
+
+	@media ($desktop) {
+
+		&:hover {
+
+			background-color: #e4be62;
+
+		}
+
+	}
+
+	&--medium {
+
+		height: 80px;
+		line-height: 80px;
+		padding: 0 48px;
+
+	}
+
+	@media ($mdWidth) {
+
+		padding: 0 20px;
+		height: 46px;
+		line-height: 46px;
+
+	}
+
+}

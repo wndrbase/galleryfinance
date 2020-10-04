@@ -1,0 +1,74 @@
+.billboard {
+
+	.center {
+
+		width: 1380px;
+		padding: 0 20px;
+
+	}
+
+	&__box {
+
+		background-color: #c4c4c4;
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 623px;
+
+		@media ($mdWidth) {
+
+			height: 400px;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			opacity: .8;
+			background-color: var(--bg);
+
+		}
+
+	}
+
+	&__content {
+
+		position: relative;
+		z-index: 1;
+		width: 1080px;
+		max-width: 100%;
+		padding: 40px;
+
+	}
+
+	&__title {
+
+		span {
+
+			color: var(--yellow);
+
+		}
+
+	}
+
+	&__img {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+
+	}
+
+}

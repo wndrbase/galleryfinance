@@ -1,0 +1,27 @@
+@import url(fonts.css);
+@import url(variables.css);
+@import url(media.css);
+@import url(default.css);
+@import url(form.css);
+
+@import url(swiper.css);
+
+@import url(header.css);
+@import url(menu.css);
+@import url(footer.css);
+
+@import url(billboard.css);
+@import url(home-cards.css);
+@import url(home-service.css);
+
+@import url(head-page.css);
+@import url(card-pool.css);
+@import url(statistics.css);
+
+@import url(about.css);
+
+@import url(workshop.css);
+
+@import url(auction.css);
+
+@import url(exhibition-hall.css);
