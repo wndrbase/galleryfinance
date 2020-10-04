@@ -50,7 +50,7 @@
 
 		&:hover {
 
-			background-color: #e4be62;
+			background-color: var(--yellowHover);
 
 		}
 

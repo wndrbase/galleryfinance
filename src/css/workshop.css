@@ -55,6 +55,16 @@
 			border: 2px solid var(--yellow);
 			border-radius: 8px;
 
+			@media ($desktop) {
+
+				&:hover {
+
+					color: color(var(--yellow) a(76%));
+
+				}
+
+			}
+
 		}
 
 	}

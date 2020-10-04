@@ -8,6 +8,8 @@
 	--border: color(#fad06a a(20%));
 	--green: green;
 	--yellow: #fad06a;
+	--yellowHover: #e4be62;
+	--yellowDisabled: color(#fad06a a(30%));
 	--transitionDefault: .3s;
 
 }

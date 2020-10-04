@@ -28,7 +28,7 @@
 
 		@media ($mdWidth) {
 
-			margin: 24px;
+			margin: 36px 0;
 
 		}
 
@@ -56,23 +56,6 @@
 
 			font-size: 20px;
 			text-align: center;
-
-		}
-
-	}
-
-	&__sub {
-
-		display: none;
-
-		@media ($mdWidth) {
-
-			display: block;
-			text-align: center;
-			font-size: 18px;
-			margin-top: 20px;
-			line-height: 1.8;
-			pointer-events: auto;
 
 		}
 
