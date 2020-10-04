@@ -61,4 +61,21 @@
 
 	}
 
+	&__sub {
+
+		display: none;
+
+		@media ($mdWidth) {
+
+			display: block;
+			text-align: center;
+			font-size: 18px;
+			margin-top: 20px;
+			line-height: 1.8;
+			pointer-events: auto;
+
+		}
+
+	}
+
 }

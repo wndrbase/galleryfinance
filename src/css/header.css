@@ -92,11 +92,11 @@
 
 	.btn-menu-toggle {
 
-		width: 46px;
-		height: 46px;
+		width: 48px;
+		height: 48px;
 		position: absolute;
-		top: -5px;
-		right: 10px;
+		top: -6px;
+		right: 9px;
 
 		span,
 		&::after,
