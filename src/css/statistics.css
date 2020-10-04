@@ -2,10 +2,22 @@
 
 	margin: 90px 0 120px;
 
+	@media ($smWidth) {
+
+		margin: 20px 0;
+
+	}
+
 	&__title {
 
 		text-align: center;
 		margin: 60px 0;
+
+		@media ($smWidth) {
+
+			margin: 36px 0;
+
+		}
 
 	}
 
@@ -15,6 +27,14 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: -18px;
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: auto;
+
+		}
+
 
 	}
 
@@ -26,11 +46,25 @@
 		margin: 18px;
 		padding: 36px;
 
+		@media ($smWidth) {
+
+			max-width: 100%;
+			padding: 20px;
+			margin: 18px auto;
+
+		}
+
 	}
 
 	&__logo {
 
 		margin: -10px auto 25px;
+
+		@media ($smWidth) {
+
+			margin: 0 auto;
+
+		}
 
 	}
 

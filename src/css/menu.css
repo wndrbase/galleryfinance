@@ -2,16 +2,16 @@
 
 	white-space: nowrap;
 
-	@media ($mdWidth) {
-
-		display: none;
-
-	}
-
 	&__list {
 
 		display: flex;
 		justify-content: center;
+
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -23,6 +23,12 @@
 
 			color: var(--yellow);
 			pointer-events: none;
+
+		}
+
+		@media ($mdWidth) {
+
+			margin: 24px;
 
 		}
 
@@ -43,6 +49,13 @@
 				color: color(var(--color) a(50%));
 
 			}
+
+		}
+
+		@media ($mdWidth) {
+
+			font-size: 20px;
+			text-align: center;
 
 		}
 

@@ -13,6 +13,12 @@
 		flex-shrink: 0;
 		width: 100%;
 
+		@media ($smWidth) {
+
+			padding: 0;
+
+		}
+
 		.h1 {
 
 			margin: 46px 0;
@@ -66,6 +72,17 @@
 		display: flex;
 		mix-blend-mode: lighten;
 		justify-content: center;
+
+		@media ($smWidth) {
+
+			img {
+
+				max-width: 100%;
+				height: auto;
+
+			}
+
+		}
 
 	}
 

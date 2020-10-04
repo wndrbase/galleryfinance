@@ -5,6 +5,16 @@
 	padding: 20px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, .1);
 
+	@media ($mdWidth) {
+
+		.menu-show & {
+
+			border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+		}
+
+	}
+
 	&--bb0 {
 
 		border-bottom: 0;
@@ -23,6 +33,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@media ($mdWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -44,11 +60,29 @@
 		display: flex;
 		align-items: center;
 
+		@media ($mdWidth) {
+
+			display: none;
+			margin: 20px -20px 0;
+			border-top: 1px solid rgba(255, 255, 255, .1);
+
+		}
+
 	}
 
 	&__btn {
 
 		margin-left: 24px;
+
+		@media ($mdWidth) {
+
+			margin: 20px 0 0;
+			display: flex;
+			padding-top: 20px;
+			border-top: 1px solid rgba(255, 255, 255, .1);
+			justify-content: center;
+
+		}
 
 	}
 
@@ -60,9 +94,9 @@
 
 		width: 46px;
 		height: 46px;
-		position: relative;
-		top: 0;
-		right: -12px;
+		position: absolute;
+		top: -5px;
+		right: 10px;
 
 		span,
 		&::after,
@@ -76,7 +110,8 @@
 			margin: auto;
 			width: 26px;
 			height: 3px;
-			transition: .3s;
+			transform: rotate(180deg);
+			transition: var(--transitionDefault);
 			background-color: var(--color);
 
 		}
@@ -99,23 +134,22 @@
 
 			span {
 
-				transform: scale(0) rotate(360deg);
+				transform: rotate(0deg);
+				opacity: 0;
 
 			}
 
 			&::before {
 
-				transform: rotate(225deg);
+				transform: rotate(45deg);
 				bottom: 0;
-				width: 22px;
 
 			}
 
 			&::after {
 
-				transform: rotate(-225deg);
+				transform: rotate(-45deg);
 				top: 0;
-				width: 22px;
 
 			}
 
@@ -125,17 +159,14 @@
 
 	.menu-show {
 
-		background-color: #fff;
-
 		.main,
-		.footer,
-		.header__logo {
+		.footer{
 
 			display: none;
 
 		}
 
-		.menu {
+		.header__menu {
 
 			display: block !important;
 
