@@ -1,13 +1,7 @@
+((btn) => {
 
-	document.querySelector('.btn-menu-toggle').addEventListener('click', () =>
-		document.body.classList.toggle('menu-show'));
+	"use strict";
 
-	document.querySelector('.menu').addEventListener('click', event => {
+	btn.addEventListener('click', () => document.body.classList.toggle('menu-show'));
 
-		if(event.target.closest('.menu__link')){
-
-			document.body.classList.remove('menu-show');
-
-		}
-
-	});
+})(document.querySelector('.btn-menu-toggle'));

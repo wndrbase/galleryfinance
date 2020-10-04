@@ -42,8 +42,4 @@ https://github.com/htmlpluscss/
 
 	});
 
-	window.addEventListener("scroll", () => window.requestAnimationFrame( () => PubSub.publish('windowScroll')));
-	window.addEventListener("DOMContentLoaded", () => PubSub.publish('DOMContentLoaded'));
-	window.addEventListener("load", () => PubSub.publish('pageLoad'));
-
 })();
