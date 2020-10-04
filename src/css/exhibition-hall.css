@@ -15,7 +15,7 @@
 
 		@media ($smWidth) {
 
-			padding: 0;
+			padding: 0 0 48px;
 
 		}
 

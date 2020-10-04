@@ -25,6 +25,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			height: 240px;
+
+		}
+
 		&::after {
 
 			position: absolute;
