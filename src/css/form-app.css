@@ -168,23 +168,6 @@
 
 	}
 
-	&__link {
-
-		color: var(--link);
-		text-decoration: underline;
-
-		@media ($desktop) {
-
-			&:hover {
-
-				text-decoration: none;
-
-			}
-
-		}
-
-	}
-
 	&__border {
 
 		padding: 20px;

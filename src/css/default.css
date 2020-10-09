@@ -116,6 +116,23 @@ hr {
 
 }
 
+.link {
+
+	color: var(--link);
+	text-decoration: underline;
+
+	@media ($desktop) {
+
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
+	}
+
+}
+
 /*
 -----------------------------------------------------------------------------*/
 .notsel {
