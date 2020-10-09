@@ -1,0 +1,284 @@
+.form-app {
+
+	margin: 142px auto;
+	background-color: #fff;
+	width: 528px;
+	max-width: 100%;
+	border-radius: 12px;
+	padding: 60px;
+	color: var(--bg);
+
+	@media ($smWidth) {
+
+		margin: 40px auto;
+		padding: 20px;
+
+	}
+
+	&__head {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 44px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 22px;
+
+		}
+
+	}
+
+	&__head &__title {
+
+		margin-bottom: 0q;
+
+	}
+
+	&__title {
+
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 22px;
+
+	}
+
+	&__btn-back {
+
+		svg {
+
+			fill: var(--bg);
+
+		}
+
+		@media ($desktop) {
+
+			&:hover svg {
+
+				fill: color(var(--bg) a(50%));
+
+			}
+
+		}
+
+	}
+
+	&__inputbox {
+
+		position: relative;
+		margin: 20px 0;
+
+		& + & {
+
+			margin-top: 35px;
+
+		}
+
+		&--concatenation {
+
+			padding-top: 1px;
+
+			&::before {
+
+				content: '+';
+				font-size: 20px;
+				position: absolute;
+				top: -15px;
+				left: 0;
+				right: 0;
+				text-align: center;
+
+			}
+
+		}
+
+		&-head {
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 13px 0;
+
+		}
+
+		&-control {
+
+			position: relative;
+
+		}
+
+		&-up {
+
+			position: absolute;
+			top: 0;
+			right: 22px;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+
+			&-pref {
+
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 30px;
+				padding: 0 12px;
+				color: var(--bg);
+				background-color: rgba(250, 208, 106, 0.5);
+				border-radius: 6px;
+				text-transform: uppercase;
+
+			}
+
+			&-logo {
+
+				margin-left: 14px;
+
+			}
+
+			&-suf {
+
+				margin-left: 14px;
+				font-size: 14px;
+				color: #000;
+				min-width: 36px;
+
+			}
+
+		}
+
+	}
+
+	&__label {
+
+		font-size: 14px;
+		line-height: 21px;
+		color: #000;
+
+	}
+
+	&__border {
+
+		padding: 20px;
+		border-radius: 8px;
+		border: 1px solid color(var(--bg) a(20%));
+
+		@media ($smWidth) {
+
+			padding: 10px;
+
+		}
+
+	}
+
+	&__total {
+
+		display: flex;
+		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
+		&-item {
+
+			padding: 0 8px;
+			text-align: center;
+
+			@media ($smWidth) {
+
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-between;
+
+				& + & {
+
+					margin-top: 12px;
+
+				}
+
+			}
+
+		}
+
+		&-value {
+
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			display: block;
+
+		}
+
+		&-label {
+
+			font-size: 14px;
+			line-height: 20px;
+			opacity: .5;
+			display: block;
+			margin-top: 3px;
+
+		}
+
+	}
+
+	&__submit {
+
+		&--row {
+
+			display: flex;
+			justify-content: space-between;
+
+			.btn {
+
+				max-width: calc(50% - 12px);
+
+			}
+
+		}
+
+		.btn {
+
+			width: 100%;
+			margin-top: 12px;
+			height: 60px;
+			line-height: 60px;
+
+		}
+
+	}
+
+}
+
+
+/* 	deposit */
+
+.deposit {
+
+	&__logo {
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: 8px;
+
+	}
+
+	&__inputbox {
+
+		margin: 36px 0 12px;
+
+	}
+
+	&__text {
+
+		font-size: 14px;
+		line-height: 21px;
+		opacity: .5;
+		text-align: center;
+		margin: 12px 0 24px;
+
+	}
+
+}

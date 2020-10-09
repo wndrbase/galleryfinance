@@ -1,0 +1,63 @@
+{% set title = "Remove Liquidity" %}
+
+{% set description = "" %}
+
+{% set urlPage = "remove-liquidity" %}
+
+{% set state = "app" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<form class="form-app" action="/">
+
+			<div class="form-app__head">
+
+				<button class="button form-app__btn-back" type="button" aria-label="back">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<path d="M3.83 11H16v2H3.83l5.36 5.36-1.41 1.42L0 12l7.78-7.78 1.41 1.42L3.83 11z"/>
+					</svg>
+				</button>
+
+				<h1 class="form-app__title h3">
+					{{ title }}
+				</h1>
+
+				<button class="button tooltip" type="button" aria-label="help">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<path d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm2-1.64V14h-2v-1.5a1 1 0 011-1 1.5 1.5 0 10-1.47-1.8l-1.96-.39A3.5 3.5 0 1113 13.35z"/>
+					</svg>
+				</button>
+
+			</div>
+
+			<div class="form-app__label">
+				Amount
+			</div>
+
+			<div class="form-app__border">
+
+				-
+
+			</div>
+
+			<div class="form-app__submit form-app__submit--row">
+
+				<button class="btn btn--medium">
+					Approve
+				</button>
+
+				<button class="btn btn--medium" type="button">
+					Enter an amount
+				</button>
+
+			</div>
+
+		</form>
+
+	</article>
+
+{% endblock %}
