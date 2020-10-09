@@ -1,4 +1,4 @@
-	<header class="header{% if urlPage === '' %} header--bb0{% endif %}">
+	<header class="header{% if state === 'main' %} header--bb0{% endif %}{% if state === 'app' %} header--app{% endif %}">
 
 		<div class="center">
 
@@ -19,9 +19,27 @@
 
 					<div class="header__btn">
 
+{% if state === 'app' %}
+
+						<a class="header__lk" href="/">
+
+							<span class="header__lk-balance">
+								0.00 GLF
+							</span>
+
+							<span class="header__lk-number">
+								0x4b82...a22
+							</span>
+
+						</a>
+
+{% else %}
+
 						<button class="btn" type="button" data-modal="recieve">
 							Unlock Wallet
 						</button>
+
+{% endif %}
 
 					</div>
 
