@@ -164,7 +164,12 @@
 
 		font-size: 14px;
 		line-height: 21px;
-		color: #000;
+
+		&:not(.link) {
+
+			color: #000;
+
+		}
 
 	}
 
@@ -467,20 +472,6 @@
 	&__foot {
 
 		margin: 24px 0 14px;
-
-		&-row {
-
-			display: flex;
-			margin: 6px 0;
-			justify-content: space-between;
-
-			&--pull-right {
-
-				justify-content: flex-end;
-
-			}
-
-		}
 
 	}
 
