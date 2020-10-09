@@ -83,6 +83,39 @@
 
 	}
 
+	&--green {
+
+		color: var(--green);
+		background-color: color(var(--green) a(20%));
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: color(var(--green) a(40%));
+
+			}
+
+		}
+
+	}
+
+	&--red {
+
+		color: #fff;
+		background-color: color(var(--red) a(100%));
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: color(var(--red) a(70%));
+
+			}
+
+		}
+
+	}
 
 	@media ($mdWidth) {
 

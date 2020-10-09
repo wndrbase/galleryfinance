@@ -6,7 +6,9 @@
 	--bg: #1d1d1d;
 	--blue: blue;
 	--border: color(#fad06a a(20%));
-	--green: green;
+	--green: #86ba6e;
+	--link: #fd7749;
+	--red: #fa6a6a;
 	--yellow: #fad06a;
 	--yellowHover: #e4be62;
 	--yellowDisabled: color(#fad06a a(30%));

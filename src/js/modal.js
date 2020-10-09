@@ -37,7 +37,7 @@
 
 		activeModal = modal.querySelector('.modal__item--' + selector);
 
-		Array.prototype.forEach.call(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
+		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
 		document.documentElement.classList.add('scroll-behavior-off');
 
@@ -63,7 +63,7 @@
 
 	});
 
-	Array.prototype.forEach.call(btns, el =>
+	Array.from(btns, el =>
 		el.addEventListener('click', () =>
 			modalShow(el.getAttribute('data-modal'))));
 
