@@ -201,6 +201,7 @@
 
 		font-size: 24px;
 		margin: 6px 0;
+		color: #000;
 
 	}
 
@@ -212,6 +213,13 @@
 		white-space: nowrap;
 		color: #000;
 		font-size: 20px;
+
+		@media ($smWidth) {
+
+			flex-wrap: wrap;
+			font-size: 18px;
+
+		}
 
 		&-group {
 
@@ -234,6 +242,13 @@
 		&-value {
 
 			flex-grow: 1;
+
+		}
+
+		&-label {
+
+			display: flex;
+			align-items: center;
 
 		}
 
