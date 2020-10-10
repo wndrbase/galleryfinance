@@ -18,6 +18,13 @@
 			margin: 25px 0;
 			border: 1px solid color(var(--yellow) a(20%));
 
+			@media ($smWidth) {
+
+				margin: 20px 0;
+				display: block;
+
+			}
+
 			&-power {
 
 				flex-shrink: 0;
@@ -26,6 +33,15 @@
 				color: #fff;
 				line-height: 27px;
 				border-right: 1px solid color(var(--yellow) a(20%));
+
+				@media ($smWidth) {
+
+					padding: 20px 24px;
+					border-right: 0;
+					text-align: center;
+					border-bottom: 1px solid color(var(--yellow) a(20%));
+
+				}
 
 				b {
 
@@ -52,6 +68,15 @@
 				align-items: center;
 				background-color: rgba(255, 255, 255, .1);
 
+				@media ($smWidth) {
+
+					position: relative;
+					left: 0;
+					right: 0;
+					margin-bottom: 5px;
+
+				}
+
 				svg {
 
 					fill: var(--yellow);
@@ -65,7 +90,14 @@
 				padding: 23px;
 				flex-grow: 1;
 				display: flex;
+				align-items: center;
 				justify-content: flex-end;
+
+				@media ($smWidth) {
+
+					justify-content: center;
+
+				}
 
 			}
 
@@ -76,6 +108,27 @@
 	&-table {
 
 		margin: 48px 0;
+
+		@media ($mdWidth) {
+
+			margin: 24px 0;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 20px -20px;
+			padding-bottom: 16px;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+
+		}
+
+		@media ($xsWidth) {
+
+			margin: 20px -10px;
+
+		}
 
 		table {
 
@@ -96,6 +149,26 @@
 				white-space: nowrap;
 				border-bottom: 4px solid rgba(255, 255, 255, .1);
 
+				@media ($mdWidth) {
+
+					padding-right: 24px;
+
+				}
+
+				@media ($smWidth) {
+
+					scroll-snap-align: start;
+					scroll-snap-stop: always;
+					padding: 18px 0 18px 20px;
+
+				}
+
+				@media ($xsWidth) {
+
+					padding-left: 10px;
+
+				}
+
 			}
 
 		}
@@ -112,15 +185,45 @@
 
 				padding: 12px 34px 12px 0;
 
+				@media ($smWidth) {
+
+					padding: 12px 0 12px 20px;
+
+				}
+
+				@media ($xsWidth) {
+
+					padding-left: 10px;
+
+				}
+
 				&:first-child {
 
 					padding-left: 24px;
+
+					@media ($smWidth) {
+
+						padding-left: 20px;
+
+					}
+
+					@media ($xsWidth) {
+
+						padding-left: 10px;
+
+					}
 
 				}
 
 				&:last-child {
 
 					padding-right: 24px;
+
+					@media ($smWidth) {
+
+						padding-right: 20px;
+
+					}
 
 				}
 

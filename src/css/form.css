@@ -121,10 +121,10 @@
 
 		border: 2px solid;
 		color: var(--yellow);
-		padding: 0 22px;
-		height: 39px;
+		padding: 0 22px !important;
+		height: 39px !important;
 		background-color: transparent;
-		line-height: 35px;
+		line-height: 35px !important;
 
 		@media ($desktop) {
 
