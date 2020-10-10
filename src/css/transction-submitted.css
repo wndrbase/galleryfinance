@@ -1,5 +1,7 @@
 .transction-submitted {
 
+	text-align: center;
+
 	&__logo {
 
 		width: 120px;
@@ -26,11 +28,9 @@
 
 	}
 
-	&__title {
+	.modal__title {
 
-		text-align: center;
-		font-weight: 400;
-		color: #000;
+		margin: 0;
 
 	}
 

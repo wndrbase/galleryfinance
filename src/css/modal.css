@@ -53,6 +53,14 @@
 
 	}
 
+	&__title {
+
+		font-weight: 400;
+		margin-bottom: 18px;
+		color: #000;
+
+	}
+
 }
 
 .modal-show {
@@ -92,14 +100,6 @@
 }
 
 .form-recieve {
-
-	&__title {
-
-		font-weight: 400;
-		margin-bottom: 18px;
-		color: #000;
-
-	}
 
 	&__radio {
 
@@ -279,6 +279,43 @@
 	.data-price {
 
 		margin: 24px 0;
+
+	}
+
+}
+
+.form-vote {
+
+	margin: 0 !important;
+
+	&__inputbox {
+
+		margin: 18px 0 12px !important;
+
+	}
+
+	&__table {
+
+		font-size: 16px;
+		line-height: 21px;
+		color: var(--bg);
+		margin: 12px -6px;
+
+		th {
+
+			text-align: left;
+			font-weight: 400;
+			padding: 6px;
+			opacity: .5;
+			vertical-align: top;
+
+		}
+
+		td {
+
+			padding: 6px;
+
+		}
 
 	}
 

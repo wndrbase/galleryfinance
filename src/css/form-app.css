@@ -119,6 +119,16 @@
 
 		}
 
+		&-after-text {
+
+			font-size: 14px;
+			line-height: 21px;
+			opacity: .5;
+			text-align: center;
+			margin: 12px 0 24px;
+
+		}
+
 		&-up {
 
 			position: absolute;
@@ -170,6 +180,17 @@
 			color: #000;
 
 		}
+
+	}
+
+	&__note {
+
+		font-size: 16px;
+		line-height: 27px;
+		color: #000;
+		margin: 24px 0;
+		padding-left: 12px;
+		border-left: 4px solid var(--yellow);
 
 	}
 
@@ -346,16 +367,6 @@
 	&__inputbox {
 
 		margin: 36px 0 12px;
-
-	}
-
-	&__text {
-
-		font-size: 14px;
-		line-height: 21px;
-		opacity: .5;
-		text-align: center;
-		margin: 12px 0 24px;
 
 	}
 
