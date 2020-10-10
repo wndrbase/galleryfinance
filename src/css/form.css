@@ -117,6 +117,28 @@
 
 	}
 
+	&--vote {
+
+		border: 2px solid;
+		color: var(--yellow);
+		padding: 0 22px;
+		height: 39px;
+		background-color: transparent;
+		line-height: 35px;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--bg);
+				border-color: var(--yellowHover);
+
+			}
+
+		}
+
+	}
+
 	@media ($mdWidth) {
 
 		padding: 0 20px;
