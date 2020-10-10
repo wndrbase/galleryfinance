@@ -284,6 +284,62 @@
 
 }
 
+.form-vote-new {
+
+	margin: 0 !important;
+
+	&__fieldset {
+
+		margin: 25px 0;
+
+		.input {
+
+			margin: 12px 0;
+			font-weight: 400;
+
+		}
+
+	}
+
+	&__max-length {
+
+		display: block;
+		font-size: 12px;
+		line-height: 21px;
+		color: #000;
+		opacity: 0.5;
+
+	}
+
+	&__info {
+
+		position: relative;
+		font-size: 14px;
+		line-height: 21px;
+		color: #000;
+		padding-left: 28px;
+		margin: 12px 0;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			fill: var(--bg);
+
+		}
+
+	}
+
+	hr {
+
+		background-color: #c4c4c4;
+		opacity: .2;
+
+	}
+
+}
+
 .form-vote {
 
 	margin: 0 !important;

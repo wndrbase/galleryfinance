@@ -223,7 +223,7 @@
 
 			<div class="modal__item modal__item--vote">
 
-				<form class="form-vote form-app" action="/" novalidate="novalidate">
+				<form class="form-vote-new form-app" action="/" novalidate="novalidate">
 
 					<h3 class="modal__title h3">
 						Vote for a Figure
@@ -297,6 +297,50 @@
 
 			</div>
 
+			<div class="modal__item modal__item--vote-new">
+
+				<form class="form-vote-new form-app" action="/" novalidate="novalidate">
+
+					<h3 class="modal__title h3">
+						Propose a New Figure
+					</h3>
+
+					<div class="form-vote-new__fieldset">
+
+						<input class="input" placeholder="Name">
+
+						<textarea class="input" placeholder="Details"></textarea>
+
+						<small class="form-vote-new__max-length">
+							Note: no more than 200 caharcters
+						</small>
+
+						<p class="form-vote-new__info">
+							<svg width="21" height="21" viewBox="0 0 21 21">
+								<path d="M10.5 19.25a8.75 8.75 0 110-17.5 8.75 8.75 0 010 17.5zm-.88-6.13v1.76h1.76v-1.76H9.62zm0-7v5.25h1.76V6.13H9.62z"/>
+							</svg>
+							Please describe the person and attach his linkedin or&nbsp;social media links where artists can find photos.
+						</p>
+
+					</div>
+
+					<hr>
+
+					<p class="form-app__note">
+						You need to stake <b>100 GLF tokens</b> to propose a&nbsp;figure and tokens will be staked for 4 days. <br>You can propose more than one figure
+					</p>
+
+					<div class="form-app__submit">
+
+						<button class="btn btn--medium">
+							Submit
+						</button>
+
+					</div>
+
+				</form>
+
+			</div>
 
 			<button type="button" class="modal__close modal__close-btn button" aria-label="Close modal">
 				<svg width="24" height="24" viewBox="0 0 24 24" >
