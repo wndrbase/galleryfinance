@@ -41,6 +41,8 @@
 
 		document.documentElement.classList.add('scroll-behavior-off');
 
+		modal.classList.toggle('is-full', selector === 'gallery');
+
 		setTimeout( () => {
 
 			wrapper.style.top = -windowScroll + 'px';
@@ -62,6 +64,8 @@
 		}
 
 	});
+
+	modal.addEventListener('modalShow', event => modalShow(event.detail.selector));
 
 	Array.from(btns, el =>
 		el.addEventListener('click', () =>

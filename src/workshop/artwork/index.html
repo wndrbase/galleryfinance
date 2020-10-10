@@ -1,0 +1,22 @@
+{% set title = "Vote for the Artwork" %}
+
+{% set description = "" %}
+
+{% set urlPage = "workshop/artwork" %}
+
+{% extends "template/base.html" %}
+
+{% set breadcrumbs = ["Workshops","Voter"] %}
+
+{% block content %}
+
+	<article class="center">
+
+{% include "workshop/voter/head.html" %}
+{% include "workshop/artwork/tab.html" %}
+{% include "workshop/artwork/hashtag.html" %}
+{% include "workshop/artwork/list.html" %}
+
+	</article>
+
+{% endblock %}

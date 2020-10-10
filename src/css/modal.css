@@ -10,6 +10,35 @@
 	align-items: center;
 	padding: 40px;
 
+	&.is-full &__item {
+
+		background-color: transparent;
+		padding: 0;
+
+	}
+
+	&.is-full &__box {
+
+		width: auto;
+		position: static;
+
+	}
+
+	&.is-full &__close-btn {
+
+		top: 24px;
+		right: 24px;
+
+		svg {
+
+			fill: #fff;
+			width: 36px;
+			height: 36px;
+
+		}
+
+	}
+
 	@media ($smWidth) {
 
 		padding: 20px;
@@ -372,6 +401,37 @@
 			padding: 6px;
 
 		}
+
+	}
+
+}
+
+#modal-gallery {
+
+	.swiper-container--gallery {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+	}
+
+	.swiper-slide {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 80px 100px 20px;
+
+	}
+
+	img {
+
+		max-width: 100%;
+		max-height: 100%;
+		margin: auto;
 
 	}
 
