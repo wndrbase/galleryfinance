@@ -17,6 +17,7 @@
 		border-radius: 12px;
 		padding: 60px;
 		margin: 24px 0;
+		position: relative;
 
 		@media ($smWidth) {
 
@@ -295,6 +296,20 @@
 			height: 60px;
 			padding: 0;
 			line-height: 60px;
+
+		}
+
+	}
+
+	&__close-btn {
+
+		position: absolute;
+		top: 24px;
+		right: 24px;
+
+		svg {
+
+			fill: #000;
 
 		}
 
