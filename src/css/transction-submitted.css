@@ -41,6 +41,30 @@
 
 	}
 
+	&__loading {
+
+		display: flex;
+		justify-content: center;
+		margin: 36px 0;
+
+		svg {
+
+			fill: var(--yellow);
+			animation: loading 1s linear infinite;
+
+		}
+
+	}
+
+	&__text {
+
+		font-size: 14px;
+		color: #808080;
+		margin: 12px 0 60px;
+		text-align: center;
+
+	}
+
 	&__btn {
 
 		width: 100%;
@@ -54,4 +78,11 @@
 
 	}
 
+}
+
+
+@keyframes loading {
+	to {
+		transform: rotate(360deg);
+	}
 }
