@@ -1,0 +1,65 @@
+{% set title = "About GLF Token" %}
+
+{% set description = "GLF tokens should be in the hands of artists. The main functionalities and utilities of GLF tokens are as followed" %}
+
+{% set urlPage = "about/glf-token" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<div class="about__box">
+
+{% include "about/bar.html" %}
+
+			<div class="about__body">
+
+				<h1>
+					GLF tokens
+				</h1>
+
+				<p>
+					GLF tokens should be in the hands of artists. The main functionalities and utilities of GLF tokens are as followed:
+				</p>
+
+				<ol>
+
+					<li>
+						Workshop – token holders can stake to start a workshop, and participants use tokens to participate in the workshop and vote for artworks.
+					</li>
+
+					<li>
+						Auction – transaction fees will be used to purchase GLF tokens. Half of the transaction fees will be shared with original creators of the NFTs and the other half will be burned forever.
+					</li>
+
+					<li>
+						Exhibition hall – Artists can use GLF tokens to purchase decentralized storage and store their arts and exhibit arts on gallery finance
+					</li>
+
+					<li>
+						Pools – the initial distribution of GLF tokens will implement liquidity mining where participants need to stake in the liquidity pool to mine GLF tokens. In the future, the pool will be used to mine NFT arts generated from workshops.
+					</li>
+
+				</ol>
+
+				<div class="about__body-total-tokens">
+					Total supply of GLF tokens is 30,000
+				</div>
+
+				<h2>
+					Token distribution
+				</h2>
+
+				<p>
+					We distribute our tokens through Farming and the first artist workshop. 15000 tokens will be allocated to farming and 15000 tokens will be allocated through the first artist workshop.
+				</p>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

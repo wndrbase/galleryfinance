@@ -1,0 +1,20 @@
+{% set title = "Vote for the Figures" %}
+
+{% set description = "" %}
+
+{% set urlPage = "workshop/voter" %}
+
+{% extends "template/base.html" %}
+
+{% set breadcrumbs = ["Workshops","Voter"] %}
+
+{% block content %}
+
+	<article class="center">
+
+{% include "workshop/voter/head.html" %}
+{% include "workshop/voter/table.html" %}
+
+	</article>
+
+{% endblock %}

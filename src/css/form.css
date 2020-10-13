@@ -5,7 +5,7 @@
 	border-radius: 0;
 	font-family: inherit;
 	background-color: transparent;
-	transition: .1s;
+	transition: var(--transitionDefault);
 	cursor: pointer;
 	user-select: none;
 	position: relative;
@@ -14,6 +14,7 @@
 	text-align: center;
 	white-space: nowrap;
 	display: block;
+	flex-shrink: 0;
 
 	&:focus {
 
@@ -30,6 +31,7 @@
 	&[disabled] {
 
 		pointer-events: none;
+		opacity: .3;
 
 	}
 
@@ -37,87 +39,43 @@
 
 .btn {
 
-	padding: 0 50px;
-	height: 100px;
-	font-size: 24px;
-	line-height: 100px;
-	font-weight: 700;
-	color: #fff;
-	border-radius: 12px;
-	background-color: var(--green);
+	padding: 0 36px;
+	height: 60px;
+	font-size: 16px;
+	line-height: 60px;
+	font-weight: 600;
+	color: var(--bg);
+	border-radius: 8px;
+	background-color: var(--yellow);
 
 	@media ($desktop) {
 
 		&:hover {
 
-			background-color: #2f9978;
+			background-color: var(--yellowHover);
 
 		}
-
-	}
-
-	@media ($smWidth) {
-
-		height: 80px;
-		line-height: 80px;
-		font-size: 20px;
 
 	}
 
 	&--medium {
 
 		height: 80px;
-		font-size: 20px;
 		line-height: 80px;
+		padding: 0 48px;
 
 	}
 
-	&--small {
+	&--outline {
 
-		padding: 0 30px;
-		height: 60px;
-		font-size: 16px;
-		line-height: 60px;
-
-		@media ($smWidth) {
-
-			height: 40px;
-			line-height: 40px;
-			font-size: 16px;
-			padding: 0 20px;
-
-		}
-
-	}
-
-}
-
-.checkbox {
-
-	display: block;
-	position: relative;
-	cursor: pointer;
-	font-size: 14px;
-	line-height: 20px;
-	color: #7f7f7f;
-	position: relative;
-
-	@media ($smWidth) {
-
-		font-size: 12px;
-
-	}
-
-	a {
-
-		color: var(--color);
-		text-decoration: underline;
+		background-color: transparent;
+		box-shadow: inset 0 0 0 1px var(--bg);
 
 		@media ($desktop) {
 
 			&:hover {
 
-				text-decoration: none;
+				background-color: color(var(--bg) a(10%));
 
 			}
 
@@ -125,22 +83,298 @@
 
 	}
 
+	&--green {
+
+		color: var(--green);
+		background-color: color(var(--green) a(20%));
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: color(var(--green) a(40%));
+
+			}
+
+		}
+
+	}
+
+	&--red {
+
+		color: #fff;
+		background-color: color(var(--red) a(100%));
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: color(var(--red) a(70%));
+
+			}
+
+		}
+
+	}
+
+	&--vote {
+
+		border: 2px solid;
+		color: var(--yellow);
+		padding: 0 22px !important;
+		height: 39px !important;
+		background-color: transparent;
+		line-height: 35px !important;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--bg);
+				border-color: var(--yellowHover);
+
+			}
+
+		}
+
+	}
+
+	@media ($mdWidth) {
+
+		padding: 0 20px;
+		height: 46px;
+		line-height: 46px;
+
+	}
+
+}
+
+
+.input {
+
+	height: 60px;
+	line-height: 20px;
+
+	padding: 20px;
+
+	font-size: 16px;
+	color: #000;
+	font-weight: 600;
+
+	width: 100%;
+	font-family: inherit;
+	position: relative;
+	appearance: none;
+	display: block;
+	filter: none;
+	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
+
+	border-radius: 8px;
+
+	border: 1px solid color(var(--bg) a(20%));
+	background-color: transparent;
+
+	textarea& {
+
+		height: 120px;
+		overflow: hidden;
+		resize: none;
+
+	}
+
+	&::placeholder {
+
+		color: inherit;
+		opacity: .4;
+
+	}
+
+	&::-ms-clear {
+
+		display: none;
+
+	}
+
+	@media ($desktop) {
+
+		&:hover {
+
+			border-color: var(--bg);
+
+		}
+
+	}
+
+	&:focus {
+
+		outline: none;
+		border-color: var(--yellow) !important;
+
+	}
+
+	&[disabled] {
+
+		pointer-events: none;
+
+	}
+
+	&--error {
+
+		border-color: var(--error) !important;
+
+	}
+
+	&:invalid {
+
+		box-shadow: none;
+
+	}
+
+}
+
+@keyframes autofill {
+
+	to {
+
+		color: #000;
+		background-color: #fff;
+
+	}
+
+}
+
+
+
+.select {
+
+	position: relative;
+	display: block;
+
+	&::after {
+
+		position: absolute;
+		top: 18px;
+		right: 18px;
+		content: '';
+		pointer-events: none;
+		width: 24px;
+		height: 24px;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.2 8.3A1.05 1.05 0 1118.7 9.8l-5.95 5.9c-.4.41-1.07.41-1.49 0L5.31 9.8A1.06 1.06 0 016.8 8.3l5.2 4.84 5.2-4.83z' fill='%23fff'/%3E%3C/svg%3E");
+
+	}
+
+	select {
+
+		background-color: transparent;
+		position: relative;
+		display: block;
+		font-size: 16px;
+		font-family: inherit;
+		color: #fff;
+		padding: 16px;
+		width: 100%;
+		max-width: 100%;
+		border: 1px solid rgba(255, 255, 255, .2);
+		border-radius: 8px;
+		appearance: none;
+		line-height: 20px;
+		height: 60px;
+
+		&::-ms-expand {
+
+			display: none;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover:not(:focus) {
+
+				border-color: rgba(255, 255, 255, 0.4);
+				cursor: pointer;
+
+			}
+
+		}
+
+		&:focus {
+
+			outline: none;
+			border-color: rgba(255, 255, 255, 1);
+
+		}
+
+	}
+
+	option {
+
+		font-size: 16px;
+		font-family: inherit;
+		color: #fff;
+		line-height: 1.5;
+
+		&[value="none"] {
+
+			display: none;
+
+		}
+
+	}
+
+}
+
+
+.checkbox {
+
+	display: block;
+	position: relative;
+	cursor: pointer;
+
+	font-size: 14px;
+	line-height: 20px;
+	color: #000;
+
 	&__label {
 
 		display: block;
-		padding-left: 33px;
+		padding-left: 36px;
 
 		&::before {
 
-			width: 18px;
-			height: 18px;
 			position: absolute;
-			top: 0;
+			width: 22px;
+			height: 22px;
 			left: 0;
-			content: '';
-			border: 1px solid #c2c2c2;
-			background-color: #fff;
+			top: 0;
+			border: 1px solid color(var(--bg) a(30%));
 			border-radius: 4px;
+			content: '';
+
+		}
+
+		a {
+
+			text-decoration: underline;
+
+			@media ($desktop) {
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+
+		}
+
+	}
+
+	@media ($desktop) {
+
+		&:hover &__label::before {
+
+			border-color: var(--bg);
 
 		}
 
@@ -148,33 +382,9 @@
 
 	&__input:checked + &__label::before {
 
+		background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.8 11.9c-.3 0-.59-.14-.77-.39l-2.5-3.3a.97.97 0 111.55-1.18L5.73 9.2l4.14-6.64a.98.98 0 011.65 1.03l-4.89 7.85a.97.97 0 01-.78.46h-.04z' fill='%23000'/%3E%3C/svg%3E");
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.722 12a1.11 1.11 0 01-.833-.355L3.212 8.609c-.348-.394-.258-.955.202-1.254.461-.3 1.115-.221 1.464.174l1.761 1.995 4.43-6.102c.304-.42.948-.548 1.438-.286.49.26.64.814.335 1.234l-5.233 7.207c-.182.251-.496.408-.84.422L6.723 12z' fill='%23131415'/%3E%3C/svg%3E");
-
-	}
-
-	&--error &__label::before {
-
-		border-color: #B73E3E;
-
-	}
-
-	&--white {
-
-		color: color(#fff a(70%));
-
-		a {
-
-			color: #fff;
-
-		}
-
-	}
-
-	&--white &__label::before {
-
-		border-color: #fff;
 
 	}
 

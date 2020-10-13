@@ -2,28 +2,42 @@
 
 {% set description = "" %}
 
-{% set urlMain = url + '/main' %}
+{% set urlPage = "" %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<div style="padding: 80px 40px">
+	<ul style="margin: 24px" class="h2">
+		<li><a href="/workshop/artwork">Vote for the Artwork</a></li>
+		<li><a href="/workshop/submit">Submit an Artwork</a></li>
+		<li><a href="/workshop/voter">Vote for the Figures</a></li>
+		<li><a href="/remove-liquidity">Remove Liquidity</a></li>
+		<li><a href="/remove-liquidity-5">Remove Liquidity 5</a></li>
+		<li><a href="/pools-2">YFI Staking 2</a></li>
+		<li><a href="/pools-1">GLF / USDT Liquidity Pool</a></li>
+		<li><a href="/add-liquidity">Add liquidity</a></li>
+		<li><a href="/deposit">Deposit</a></li>
+		<li><a href="/claim-reward">Claim Reward</a></li>
+	</ul>
 
-		<h1 class="h1">Pages</h1>
+	<div>
 
-		<ul class="h2">
-			<li><a href="/main">main</a></li>
-			<li><a href="/pools">pools</a></li>
-		</ul>
+		<button style="margin: 24px" class="btn btn--medium btn--green" type="button" data-modal="approved">
+			You will recieve
+		</button>
 
-		<hr style="margin: 20px">
+		<button style="margin: 24px" class="btn btn--medium btn--red" type="button" data-modal="submitted">
+			Transction submitted
+		</button>
 
-		<h1 class="h1">PageSpeed</h1>
+		<button style="margin: 24px" class="btn btn--medium btn--red" type="button" data-modal="loading">
+			Transction submitted (Waiting For Confirmation)
+		</button>
 
-		<ul class="h2">
-			<li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2F{{ domain }}%2Fmain%2F&tab=desktop">main <b>0|0</b></a></li><li><a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2F{{ domain }}%2Fpools%2F&tab=desktop">pools <b>0|0</b></a></li>
-		</ul>
+		<button style="margin: 24px" class="btn btn--medium btn--red" type="button" data-modal="done">
+			Transction submitted (done)
+		</button>
 
 	</div>
 

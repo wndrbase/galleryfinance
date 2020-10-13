@@ -1,49 +1,7 @@
-/*! UTF-8
-
-© kovrigin
-Все права разрешены
-красивый дизайн должен иметь красивый код®
-
-https://github.com/htmlpluscss/
-
-*/
-
-(()=>{
+((btn) => {
 
 	"use strict";
 
-	window.GF = window.GF || {};
-	GF.resizeTimeout = null;
-	GF.windowWidthOLd = window.innerWidth;
+	btn.addEventListener('click', () => document.body.classList.toggle('menu-show'));
 
-	window.addEventListener("resize",()=>{
-
-		window.requestAnimationFrame(()=>{
-
-			if (!GF.resizeTimeout) {
-
-				GF.resizeTimeout = setTimeout(()=>{
-
-					GF.resizeTimeout = null;
-
-					if(GF.windowWidthOLd !== window.innerWidth) {
-
-						GF.windowWidthOLd = window.innerWidth;
-
-						PubSub.publish('windowWidthResize');
-
-					}
-
-				}, 100);
-
-			}
-
-		});
-
-	});
-
-	window.addEventListener("scroll", () => window.requestAnimationFrame( () => PubSub.publish('windowScroll')));
-	window.addEventListener("DOMContentLoaded", () => PubSub.publish('DOMContentLoaded'));
-	window.addEventListener("load", () => PubSub.publish('pageLoad'));
-
-})();
+})(document.querySelector('.btn-menu-toggle'));

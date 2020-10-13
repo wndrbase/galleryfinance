@@ -1,0 +1,63 @@
+{% set title = "Exhibition hall" %}
+
+{% set description = "If you just want to display your art and let people enjoy, here is the place." %}
+
+{% set urlPage = "exhibition-hall" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="exhibition-hall center">
+
+		<div class="exhibition-hall__body">
+
+			<h1 class="h1">
+				Experience is more important than money
+			</h1>
+
+			<ol>
+
+				<li>
+					If you just want to display your art and let people enjoy, here is the place.
+				</li>
+
+				<li>
+					You can display your art, and write your story and the thoughts of your arts.
+				</li>
+
+				<li>
+					You can also choose to store it on a decentralized network.
+				</li>
+
+			</ol>
+
+			<div class="exhibition-hall__btn">
+
+				<a href="/" class="">
+					Coming Soon!
+				</a>
+
+			</div>
+
+		</div>
+
+		<div class="exhibition-hall__img">
+
+			<picture>
+
+				<source srcset="/img/exhibition-hall/img--mobile.webp 1x, /img/exhibition-hall/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 360px)">
+				<source srcset="/img/exhibition-hall/img--mobile.png 1x, /img/exhibition-hall/img--mobile@2x.png 2x" media="(max-width: 360px)">
+
+				<source srcset="/img/exhibition-hall/img.webp 1x, /img/exhibition-hall/img@2x.webp 2x" type="image/webp">
+				<source srcset="/img/exhibition-hall/img.png 1x, /img/exhibition-hall/img@2x.png 2x">
+
+				<img src="/img/exhibition-hall/img.png" width="566" height="437" loading="lazy" alt="">
+
+			</picture>
+
+		</div>
+
+	</article>
+
+{% endblock %}

@@ -13,6 +13,12 @@ html {
 	flex-direction: column;
 	scroll-behavior: smooth;
 
+	&.scroll-behavior-off {
+
+		scroll-behavior: auto;
+
+	}
+
 }
 
 body {
@@ -32,19 +38,13 @@ body {
 	position: relative;
 	background-color: var(--bg);
 
-	/* IE10+ CSS styles go here */
-	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
-		min-height: 100vh;
-
-	}
-
 }
 
 a {
 
 	color: var(--color);
 	text-decoration: none;
+	transition: var(--transitionDefault);
 
 	&:hover {
 
@@ -57,7 +57,7 @@ a {
 
 ::selection {
 
-	color: var(--color);
+	color: var(--bg);
 	background-color: var(--yellow);
 
 }
@@ -65,8 +65,8 @@ a {
 img {
 
 	border: 0;
+	display: block;
 	position: relative;
-	vertical-align: top;
 
 }
 
@@ -80,6 +80,9 @@ li {
 svg {
 
 	display: block;
+	fill: var(--color);
+	position: relative;
+	transition: var(--transitionDefault);
 
 }
 
@@ -87,6 +90,62 @@ table {
 
 	border: 0;
 	border-collapse: collapse;
+
+}
+
+hr {
+
+	height: 1px;
+	border: 0;
+	background-color: #fff;
+	opacity: .1;
+
+}
+
+.align-center {
+
+	text-align: center;
+
+}
+
+.link {
+
+	color: var(--link);
+	text-decoration: underline;
+
+	@media ($desktop) {
+
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
+	}
+
+}
+
+.opacity-60 {
+
+	opacity: .6;
+
+}
+
+.fz-14 {
+
+	font-size: 14px;
+
+}
+
+.fz-20 {
+
+	font-size: 20px;
+
+}
+
+.color-gray {
+
+	color: #808080;
 
 }
 
@@ -102,13 +161,50 @@ table {
 
 	font-size: 48px;
 	line-height: 60px;
+	font-weight: 400;
+
+	@media ($mdWidth) {
+
+		font-size: 36px;
+		line-height: 48px;
+
+	};
+
+	@media ($smWidth) {
+
+		font-size: 24px;
+		line-height: 36px;
+
+	}
+
 
 }
 
 .h2 {
 
-	font-size: 48px;
-	line-height: 60px;
+	font-size: 36px;
+	line-height: 48px;
+	font-weight: 400;
+
+}
+
+.h3 {
+
+	font-size: 24px;
+	font-weight: 600;
+
+	@media ($smWidth) {
+
+		font-size: 20px;
+
+	}
+
+}
+
+.h4 {
+
+	font-size: 20px;
+	font-weight: 700;
 
 }
 
@@ -127,29 +223,13 @@ nav {
 
 }
 
-.wrapper {
+.wrapper,
+.main {
 
 	flex-shrink: 0;
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-
-	@media ($mdWidth) {
-
-
-	}
-
-	@media ($smWidth) {
-
-
-	}
-
-}
-
-.main {
-
-	flex-shrink: 0;
-	flex-grow: 1;
 
 }
 

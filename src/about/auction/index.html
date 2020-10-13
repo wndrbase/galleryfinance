@@ -1,0 +1,33 @@
+{% set title = "About Auction" %}
+
+{% set description = "Auction is a fancy subject, and auctions for arts are even fancier. We think artists should always benefit from transactional values generated from their arts" %}
+
+{% set urlPage = "about/auction" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<div class="about__box">
+
+{% include "about/bar.html" %}
+
+			<div class="about__body">
+
+				<h1>
+					Auction
+				</h1>
+
+				<p>
+					Auction is a fancy subject, and auctions for arts are even fancier. We think artists should always benefit from transactional values generated from their arts. They should always get some benefits from the change in hands of their arts. So, in gallery, we share transaction fees with the original creators of NFTs to make sure artists are benefitted.
+				</p>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

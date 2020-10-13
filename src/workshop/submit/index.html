@@ -1,0 +1,103 @@
+{% set title = "Submit an Artwork" %}
+
+{% set description = "" %}
+
+{% set urlPage = "workshop/submit" %}
+
+{% extends "template/base.html" %}
+
+{% set breadcrumbs = ["Workshops","Submit"] %}
+
+{% block content %}
+
+	<article class="center">
+
+		<form action="/" class="submit-artwork">
+
+			<h1 class="submit-artwork__title h3">
+				{{ title }}
+			</h1>
+
+			<div class="submit-artwork__select submit-artwork__inputbox">
+
+				<label for="submit-artwork-select" class="submit-artwork__label">
+					Select the figure your art is for
+				</label>
+
+				<div class="select">
+
+					<select id="submit-artwork-select">
+						<option value="none">Select</option>
+						<option value="1">Value 1</option>
+						<option value="2">Value 2</option>
+					</select>
+
+				</div>
+
+			</div>
+
+			<div class="submit-artwork__drop submit-artwork__inputbox">
+
+				<input class="submit-artwork__drop-input" type="file">
+
+				<div class="submit-artwork__drop-content">
+
+					<svg class="submit-artwork__drop-logo" width="48" height="48" viewBox="0 0 48 48">
+						<path d="M9.5 22.2v1.2l.85-.85L14 18.91l10.65 10.64.35.36.35-.36L32 22.91l5.65 5.64.85.86V9.5h-29v12.7zm.15 5.3l-.15.15V38.5h6.9l.15-.15 5.98-5.97.35-.35-.35-.35-8.18-8.18-.35-.35-.35.35-4 4zM21.5 37.65l-.85.85H38.5v-4.84l-.15-.16-6-6-.35-.35-.35.35L21.5 37.65zM8 6.5h32A1.5 1.5 0 0141.5 8v32a1.5 1.5 0 01-1.5 1.5H8A1.5 1.5 0 016.5 40V8A1.5 1.5 0 018 6.5zm23 13a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+					</svg>
+
+					<p class="submit-artwork__drop-text">
+						Drop your image here, or <b>browse</b>
+					</p>
+
+					<small class="submit-artwork__drop-format">
+						Supports: JPG, JPEG2000, PNG
+					</small>
+
+				</div>
+
+			</div>
+
+			<div class="submit-artwork__row">
+
+				<div class="submit-artwork__row-item submit-artwork__inputbox">
+
+					<input class="submit-artwork__input input input--error" placeholder="Artwork Name" value="1">
+
+					<div class="submit-artwork__text-error">
+						Artwork Name no correct
+					</div>
+
+				</div>
+
+				<div class="submit-artwork__row-item submit-artwork__inputbox">
+
+					<input class="submit-artwork__input input" placeholder="Artist name">
+
+				</div>
+
+			</div>
+
+			<div class="submit-artwork__textarea submit-artwork__inputbox">
+
+				<label for="submit-artwork-textarea" class="submit-artwork__label">
+					Background
+				</label>
+
+				<textarea class="submit-artwork__input input" id="submit-artwork-textarea" placeholder="no more than 200 caharcters"></textarea>
+
+			</div>
+
+			<p class="submit-artwork__note">
+				You need to stake <b>20 tokens for 7 days</b> to submit your art piece. You can submit more than one art piece.
+			</p>
+
+			<button class="submit-artwork__btn btn">
+				Confirm
+			</button>
+
+		</form>
+
+	</article>
+
+{% endblock %}

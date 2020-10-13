@@ -8,15 +8,6 @@
 
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
-	<link href="/js/swiper.min.js" rel="preload" as="script">
-<!-- 	<link href="/fonts/Gilroy-Medium.woff2" rel="preload" as="font">
-<link href="/fonts/Gilroy-Extrabold.woff2" rel="preload" as="font">
-<link href="/fonts/Gilroy-Regular.woff2" rel="preload" as="font">
-<link href="/fonts/Gilroy-Semibold.woff2" rel="preload" as="font">
-<link href="/fonts/Gilroy-Bold.woff2" rel="preload" as="font"> -->
-<!-- 	<link href="/img/first-screen/img--mobile.svg" rel="preload" as="image" media="(max-width: 719px)">
-<link href="/img/first-screen/img--table.svg" rel="preload" as="image" media="(min-width: 720px) and (max-width: 1199px)">
-<link href="/img/first-screen/img.svg" rel="preload" as="image" media="(min-width: 1200px)"> -->
 
 	<link href="{{ url }}/favicon.png" rel="apple-touch-icon-precomposed">
 
@@ -47,6 +38,17 @@
 	<link href="/css/styles.css" rel="stylesheet">
 	<script defer src="/js/scripts.js"></script>
 
+{% for item in preloadImage %}
+
+	<link href="{{ item.img }}" rel="preload" as="image" media="{{ item.media }}">
+
+{% endfor %}
+
+	<link href="/fonts/poppins-v13-latin-regular.woff2" rel="preload" as="font">
+	<link href="/fonts/poppins-v13-latin-700.woff2" rel="preload" as="font">
+	<link href="/fonts/poppins-v13-latin-600.woff2" rel="preload" as="font">
+	<link href="/fonts/poppins-v13-latin-500.woff2" rel="preload" as="font">
+
 </head>
 
 <body>
@@ -59,7 +61,7 @@
 
 {% if breadcrumbs %}
 
-	{% include "template/breadcrumbs.html" %}
+{% include "template/breadcrumbs.html" %}
 
 {% endif %}
 
@@ -71,7 +73,7 @@
 
 </div>
 
-{% include "template/cookie.html" %}
+{% include "template/modal.html" %}
 
 </body>
 </html>

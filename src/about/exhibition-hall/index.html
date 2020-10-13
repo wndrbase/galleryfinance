@@ -1,0 +1,33 @@
+{% set title = "About Exhibition hall" %}
+
+{% set description = "Decentralized storage like Arweave provides a good solution for artists who want to store their pieces permanently" %}
+
+{% set urlPage = "about/exhibition-hall" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<div class="about__box">
+
+{% include "about/bar.html" %}
+
+			<div class="about__body">
+
+				<h1>
+					Exhibition hall
+				</h1>
+
+				<p>
+					Decentralized storage like Arweave provides a good solution for artists who want to store their pieces permanently. We think this is spiritually in demand that an artist wants his arts to be exhibited forever. Exhibition hall is the place for artists to display their arts and write stories about their pieces. All exhibited arts are stored in decentralized storage.
+				</p>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

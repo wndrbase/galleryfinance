@@ -1,0 +1,33 @@
+{% set title = "About Workshop" %}
+
+{% set description = "It is sad that defi projects create NFTs and let people mine. Community never had a say in the design and creation of NFTs" %}
+
+{% set urlPage = "about/workshop" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<div class="about__box">
+
+{% include "about/bar.html" %}
+
+			<div class="about__body">
+
+				<h1>
+					Workshop
+				</h1>
+
+				<p>
+					It is sad that defi projects create NFTs and let people mine. Community never had a say in the design and creation of NFTs. The motivation for most of them was wrong. If the intention is to create some fine arts, why would you randomly put free money to mine something you actually do not like. Money takes over your art appreciation intention. Gallery Finance never creates nor designs NFTs, but it is a workshop for the community to build NFTs together. Here, you can create a community workshop to let people vote for themes and select arts and make NFTs.
+				</p>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}

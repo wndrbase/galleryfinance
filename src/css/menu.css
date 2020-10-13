@@ -2,16 +2,6 @@
 
 	white-space: nowrap;
 
-	&__title {
-
-		margin-bottom: 32px;
-		font-weight: 800;
-		font-size: 24px;
-		line-height: 30px;
-		color: #131415;
-
-	}
-
 	&__list {
 
 		display: flex;
@@ -27,17 +17,18 @@
 
 	&__item {
 
-		margin: 0 20px;
+		margin: 0 24px;
 
-		@media ($mdWidth) {
+		&.is-current {
 
-			margin: 20px 0;
+			color: var(--yellow);
+			pointer-events: none;
 
 		}
 
-		&:last-child {
+		@media ($mdWidth) {
 
-			margin-right: 0;
+			margin: 36px 0;
 
 		}
 
@@ -45,17 +36,17 @@
 
 	&__link {
 
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 500;
-		line-height: 28px;
-		color: var(--color);
+		color: inherit;
 		display: block;
+		transform: var(--transitionDefault);
 
 		@media ($desktop) {
 
 			&:hover {
 
-				color: #3773f1;
+				color: color(var(--color) a(50%));
 
 			}
 
@@ -64,7 +55,7 @@
 		@media ($mdWidth) {
 
 			font-size: 20px;
-			line-height: 30px;
+			text-align: center;
 
 		}
 

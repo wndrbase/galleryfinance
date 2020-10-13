@@ -1,0 +1,168 @@
+{% set title = "Remove Liquidity" %}
+
+{% set description = "" %}
+
+{% set urlPage = "remove-liquidity" %}
+
+{% set state = "app" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<form class="form-app" action="/">
+
+			<div class="form-app__inner">
+
+				<div class="form-app__head">
+
+					<button class="button form-app__btn-back" type="button" aria-label="back">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="M3.83 11H16v2H3.83l5.36 5.36-1.41 1.42L0 12l7.78-7.78 1.41 1.42L3.83 11z"/>
+						</svg>
+					</button>
+
+					<h1 class="form-app__title h3">
+						{{ title }}
+					</h1>
+
+					<button class="button tooltip" type="button" aria-label="help">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm2-1.64V14h-2v-1.5a1 1 0 011-1 1.5 1.5 0 10-1.47-1.8l-1.96-.39A3.5 3.5 0 1113 13.35z"/>
+						</svg>
+					</button>
+
+				</div>
+
+				<div class="slider">
+
+					<div class="slider__head">
+
+						<div class="form-app__label">
+							Amount
+						</div>
+
+						<a href="/" class="form-app__label link">
+							Detailed
+						</a>
+
+					</div>
+
+					<div class="slider__value" data-suf="%">
+						0
+					</div>
+
+					<div class="slider__track">
+
+					</div>
+
+					<div class="slider__marker">
+
+						<div class="slider__marker-item" data-value="25">
+							25%
+						</div>
+
+						<div class="slider__marker-item" data-value="50">
+							50%
+						</div>
+
+						<div class="slider__marker-item" data-value="75">
+							75%
+						</div>
+
+						<div class="slider__marker-item" data-value="100">
+							Max
+						</div>
+
+					</div>
+
+					<div class="slider__arrow">
+						<svg width="24" height="24" viewBox="0 0 24 24">
+							<path d="M13 16.17V4h-2v12.17l-5.36-5.36-1.42 1.41L12 20l7.78-7.78-1.42-1.41L13 16.17z"/>
+						</svg>
+					</div>
+
+					<div class="form-app__border">
+
+						<div class="slider__data">
+
+							<div class="slider__data-value">
+								—
+							</div>
+
+							<div class="slider__data-logo">
+								<svg width="30" height="30" viewBox="0 0 30 30">
+									<circle cx="15" cy="15" r="15" fill="#1D1D1D"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M22.6 11.01v-.58h-1.8c-.82 0-1.58.4-2.03 1.08l-2.16 3.2h-4.15v.58h3.76l-1.94 2.88c-.34.51-.91.82-1.53.82H12A4 4 0 017.98 15 4 4 0 0112 11.01h4.74v-.58H12A4.6 4.6 0 007.4 15a4.6 4.6 0 004.6 4.57h.75c.81 0 1.57-.4 2.02-1.08l2.16-3.2h3.92v-.58h-3.53l1.94-2.88c.34-.51.91-.82 1.53-.82h1.82z" fill="#fff" stroke="#fff"/>
+								</svg>
+							</div>
+
+							<div class="slider__data-suf">
+								GLF
+							</div>
+
+						</div>
+
+						<div class="slider__data">
+
+							<div class="slider__data-value">
+								—
+							</div>
+
+							<div class="slider__data-logo">
+								<svg width="30" height="30" viewBox="0 0 30 30">
+									<circle cx="15" cy="15" r="15" fill="#ECEFF0"/>
+									<path d="M15 5l-.13.46v13.22l.13.13 6-3.62L15 5z" fill="#343434"/>
+									<path d="M15 5L9 15.19l6 3.62V5z" fill="#8C8C8C"/>
+									<path d="M15 19.98l-.08.09v4.7L15 25l6-8.65-6 3.63z" fill="#3C3C3B"/>
+									<path d="M15 25v-5.02l-6-3.63L15 25z" fill="#8C8C8C"/>
+									<path d="M15 18.81l6-3.62-6-2.8v6.42z" fill="#141414"/>
+									<path d="M9 15.19l6 3.62V12.4l-6 2.79z" fill="#393939"/>
+								</svg>
+							</div>
+
+							<div class="slider__data-suf">
+								ETH
+							</div>
+
+						</div>
+
+						<div class="slider__data-pull-right">
+
+							<a href="/" class="form-app__label link">
+								Recieve WETH
+							</a>
+
+						</div>
+
+					</div>
+
+					<div class="slider__foot">
+
+{% include "template/data-price.html" %}
+
+					</div>
+
+				</div>
+
+				<div class="form-app__submit form-app__submit--row">
+
+					<button class="btn btn--medium">
+						Approve
+					</button>
+
+					<button class="btn btn--medium" type="button">
+						Enter an amount
+					</button>
+
+				</div>
+
+			</div>
+
+		</form>
+
+	</article>
+
+{% endblock %}
