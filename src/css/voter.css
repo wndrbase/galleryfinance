@@ -25,19 +25,45 @@
 
 			}
 
-			&-power {
+			&-account {
 
 				flex-shrink: 0;
-				padding: 26px 90px 26px 96px;
-				position: relative;
-				color: #fff;
-				line-height: 27px;
+				padding: 0 30px 0 24px;
 				border-right: 1px solid color(var(--yellow) a(20%));
+				display: flex;
+				align-items: center;
+
+				.link {
+
+					color: var(--yellow);
+
+				}
 
 				@media ($smWidth) {
 
 					padding: 20px 24px;
 					border-right: 0;
+					text-align: center;
+					justify-content: center;
+					border-bottom: 1px solid color(var(--yellow) a(20%));
+
+				}
+
+			}
+
+			&-power {
+
+				flex-shrink: 0;
+				padding: 30px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				color: rgba(255, 255, 255, .8);
+
+				@media ($smWidth) {
+
+					padding: 20px 24px;
+					display: block;
 					text-align: center;
 					border-bottom: 1px solid color(var(--yellow) a(20%));
 
@@ -45,9 +71,8 @@
 
 				b {
 
-					display: block;
 					font-weight: 600;
-					color:  var(--yellow);
+					color: var(--yellow);
 
 				}
 
@@ -55,27 +80,15 @@
 
 			&-ico {
 
-				position: absolute;
 				width: 60px;
 				height: 60px;
-				top: 0;
-				left: 23px;
-				bottom: 0;
-				margin: auto;
 				border-radius: 50%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				margin-right: 20px;
+				flex-shrink: 0;
 				background-color: rgba(255, 255, 255, .1);
-
-				@media ($smWidth) {
-
-					position: relative;
-					left: 0;
-					right: 0;
-					margin-bottom: 5px;
-
-				}
 
 				svg {
 

@@ -1,0 +1,47 @@
+{% set title = "Waiting confirm" %}
+
+{% set description = "" %}
+
+{% set state = "app" %}
+
+{% set urlPage = "waiting-confirm" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<form class="form-app" action="/">
+
+			<div class="form-app__inner transction-submitted">
+
+				<div class="transction-submitted__logo">
+
+					<svg width="60" height="60" viewBox="0 0 60 60">
+						<path d="M27.08,41.09l1,1V10.84h3.8V42.12l1-1,13-13L48.6,30.8,30,49.4,11.4,30.8l2.69-2.7,13,13Z" stroke="#FCE7B4" stroke-width="1.2"/>
+					</svg>
+
+				</div>
+
+				<div class="form-app__title h3">
+
+					<p class="color-gray">
+						You have successfully staked
+					</p>
+
+					100.222345 GLF
+
+				</div>
+
+				<button class="transction-submitted__btn btn">
+					Ok
+				</button>
+
+			</div>
+
+		</form>
+
+	</article>
+
+{% endblock %}
