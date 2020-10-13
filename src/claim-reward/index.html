@@ -1,0 +1,158 @@
+{% set title = "Claim Reward" %}
+
+{% set description = "" %}
+
+{% set urlPage = "claim-reward" %}
+
+{% set state = "app" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="center">
+
+		<form class="form-app" action="/">
+
+			<div class="form-app__inner claim-reward">
+
+				<h1 class="claim-reward__title h3">
+					{{ title }}
+				</h1>
+
+				<hr>
+
+				<dl class="claim-reward__dl">
+
+					<div class="claim-reward__dl-row">
+
+						<dt class="claim-reward__dl-dt">
+							Your reward pool:
+						</dt>
+
+						<dd class="claim-reward__dl-dd">
+							1200 GLF
+						</dd>
+
+					</div>
+
+					<div class="claim-reward__dl-row">
+
+						<dt class="claim-reward__dl-dt">
+							Current  staking time:
+						</dt>
+
+						<dd class="claim-reward__dl-dd">
+							23 hours
+						</dd>
+
+					</div>
+
+				</dl>
+
+				<p class="form-app__note">
+					You will get 600 GLF (50% of your GLF) if you will claim your reward now
+				</p>
+
+				<div class="claim-reward__columns">
+
+					<p class="claim-reward__columns-caption">
+						If you claim GLF from the rewards pool before a 10-day staking period is over, part of your reward will be subject to burn. The burn rate is as follows:
+					</p>
+
+{% set dl = [
+
+	{
+		dt : "0-24",
+		dd : 50
+	},
+	{
+		dt : "24-48",
+		dd : 40
+	},
+	{
+		dt : "48-72",
+		dd : 30
+	},
+	{
+		dt : "72-96",
+		dd : 20
+	},
+	{
+		dt : "96-120",
+		dd : 15
+	},
+	{
+		dt : "120-144",
+		dd : 10
+	},
+	{
+		dt : "144-168",
+		dd : 8
+	},
+	{
+		dt : "168-192",
+		dd : 6
+	},
+	{
+		dt : "192-216",
+		dd : 2
+	},
+	{
+		dt : "216-<span class=\"fz-20\">∞</span>",
+		dd : 0
+	}
+
+] %}
+
+					<dl class="claim-reward__columns-col">
+
+{% for row in dl %}
+
+						<div class="claim-reward__columns-row">
+
+							<dt class="claim-reward__columns-dt">
+								{{ row.dt }} hours:
+							</dt>
+
+							<dd class="claim-reward__columns-dd">
+								{{ row.dd } safe }}%
+							</dd>
+
+						</div>
+
+{% endfor %}
+
+					</dl>
+
+				</div>
+
+				<label class="checkbox">
+
+					<input type="checkbox" class="checkbox__input visuallyhidden" required="required">
+
+					<span class="checkbox__label">
+						I understand, claim my reward anyway
+					</span>
+
+				</label>
+
+				<div class="form-app__submit form-app__submit--row">
+
+					<button class="btn btn--outline btn--medium" type="button">
+						Cancel
+					</button>
+
+					<button class="btn btn--medium">
+						Confirm
+					</button>
+
+				</div>
+
+			</div>
+
+		</form>
+
+	</article>
+
+{% endblock %}

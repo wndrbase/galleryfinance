@@ -1,28 +1,24 @@
 {% set title = site %}
 
-{% set description = "Where community-voted ideas are crowdsourced into digital artworks(NFTs)!" %}
+{% set description = "" %}
 
 {% set urlPage = "" %}
-
-{% set state = "main" %}
-
-{% set preloadImage = [
-	{
-		media: "(min-width: 1200px)",
-		img : "/img/billboard/img--1380x623.webp"
-	},
-	{
-		media: "(max-width: 360px)",
-		img : "/img/billboard/img--640x480.webp"
-	}
-] %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-{% include "main/billboard.html" %}
-{% include "main/service.html" %}
-{% include "main/cards.html" %}
+	<ul style="margin: 24px" class="h2">
+		<li><a href="/workshop/artwork">Vote for the Artwork</a></li>
+		<li><a href="/workshop/submit">Submit an Artwork</a></li>
+		<li><a href="/workshop/voter">Vote for the Figures</a></li>
+		<li><a href="/remove-liquidity">Remove Liquidity</a></li>
+		<li><a href="/remove-liquidity-5">Remove Liquidity 5</a></li>
+		<li><a href="/pools-2">YFI Staking 2</a></li>
+		<li><a href="/pools-1">GLF / USDT Liquidity Pool</a></li>
+		<li><a href="/add-liquidity">Add liquidity</a></li>
+		<li><a href="/deposit">Deposit</a></li>
+		<li><a href="/claim-reward">Claim Reward</a></li>
+	</ul>
 
 {% endblock %}
