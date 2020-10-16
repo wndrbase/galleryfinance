@@ -58,11 +58,39 @@
 
 	}
 
+	&--small {
+
+		height: 40px;
+		line-height: 40px;
+		padding: 0 24px;
+
+	}
+
 	&--medium {
 
 		height: 80px;
 		line-height: 80px;
 		padding: 0 48px;
+
+	}
+
+	&--border {
+
+		color: var(--yellow);
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px var(--yellow);
+
+		@media ($desktop) {
+
+			&:hover {
+
+				color: var(--yellowHover);
+				background-color: transparent;
+				box-shadow: inset 0 0 0 2px var(--yellowHover);
+
+			}
+
+		}
 
 	}
 
@@ -76,6 +104,23 @@
 			&:hover {
 
 				background-color: color(var(--bg) a(10%));
+
+			}
+
+		}
+
+	}
+
+	&--gray {
+
+		color: var(--bg);
+		background-color: #e0e0e0;
+
+		@media ($desktop) {
+
+			&:hover {
+
+				background-color: #f0f0f0;
 
 			}
 

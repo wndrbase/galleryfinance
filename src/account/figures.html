@@ -1,0 +1,77 @@
+		<div class="tabs__item hide">
+
+			<div class="voter-table">
+
+				<table>
+
+					<thead>
+
+						<tr>
+							<th>
+								Proposed
+							</th>
+							<th>
+								Name
+							</th>
+							<th class="voter-table__col-max-width hidden-sm">
+								Details
+							</th>
+							<th>
+								Total Votes
+							</th>
+							<th>
+
+							</th>
+						</tr>
+
+					</thead>
+
+					<tbody>
+
+{% set tbody = [
+
+	"Jacob Jones",
+	"Annette Black",
+	"Darrell Steward",
+	"Ralph Edwards",
+	"Darlene Robertson",
+	"Cameron Williamson",
+	"Courtney Henry"
+
+] %}
+
+{% for name in tbody %}
+
+						<tr>
+							<td>
+								1{{ loop.index }}/10/2020
+							</td>
+							<td>
+								{{ name }}
+							</td>
+							<td class="hidden-sm">
+								<div class="voter-table__details">
+									<p class="voter-table__details-inner">
+										Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+									</p>
+								</div>
+							</td>
+							<td>
+								1000 GLF
+							</td>
+							<td>
+								<button type="button" class="btn btn--vote" data-modal="vote">
+									Vote
+								</button>
+							</td>
+						</tr>
+
+{% endfor %}
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+		</div>

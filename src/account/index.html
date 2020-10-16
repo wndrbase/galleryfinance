@@ -1,0 +1,23 @@
+{% set title = "Account" %}
+
+{% set description = "" %}
+
+{% set urlPage = "account" %}
+
+{% extends "template/base.html" %}
+
+{% set breadcrumbs = ["Workshops","Account"] %}
+
+{% block content %}
+
+	<article class="center account">
+
+		<h1 class="account__title h3">
+			{{ title }}
+		</h1>
+
+{% include "account/tabs.html" %}
+
+	</article>
+
+{% endblock %}
